@@ -5,7 +5,7 @@ function HomeRace() {
     return (
         <section className="bg-black py-12">
             <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
-                <h2 className="text-4xl mb-6 text-red-500 text-center tracking-wide uppercase">
+                <h2 className="text-4xl mb-6 text-red-500 font-bold text-center tracking-wide uppercase">
                     🏁 Next race
                 </h2>
                 <p className="text-4xl font-semibold">Australian Grand Prix</p>

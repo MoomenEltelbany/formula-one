@@ -29,7 +29,7 @@ function HomePodium() {
     return (
         <section className="bg-black py-16 text-white">
             <main className=" bg-neutral-900 m-4 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-title mb-10 tracking-wide">
+                <h2 className="text-3xl font-title mb-10 tracking-wide text-red-500 font-bold">
                     TOP 3 DRIVERS (PODIUM)
                 </h2>
 

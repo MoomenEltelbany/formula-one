@@ -12,7 +12,7 @@ const LINKS = [
 
 function Navbar() {
     return (
-        <nav className="bg-gray-900 text-gray-100 border-b border-gray-700">
+        <nav className="bg-neutral-900 text-gray-100 border-b border-neutral-700">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     <Logo />

@@ -3,6 +3,7 @@ import HomeStatCards from "../ui/HomeStatCards";
 import HomeLeader from "../ui/HomeLeader";
 import HomePodium from "../ui/HomePodium";
 import HomeRace from "../ui/HomeRace";
+import HomeExploreSection from "../ui/HomeExploreSection";
 
 function HomePage() {
     return (
@@ -12,6 +13,7 @@ function HomePage() {
             <HomeLeader />
             <HomePodium />
             <HomeRace />
+            <HomeExploreSection />
         </div>
     );
 }

@@ -1,49 +1,52 @@
 // !All the data here are mock data and need to be updated later with real ones from API
 
+import { GiF1Car, GiCarWheel, GiCheckeredFlag, GiTrophy } from "react-icons/gi";
+
 const STATS = [
     {
         id: 1,
-        icon: "👱🏻‍♂️",
+        icon: GiF1Car,
         title: "20 Drivers",
         stat: "Most wins this season",
         highlight: "Oscar Piastri (10 wins)",
     },
     {
         id: 2,
-        icon: "🏎️",
+        icon: GiCarWheel,
         title: "10 Teams",
         stat: "Leading team: Mclaren",
         highlight: "Team Points: 689pts",
     },
     {
         id: 3,
-        icon: "🏁",
+        icon: GiCheckeredFlag,
         title: "24 Races",
         stat: "Completed Races: 18",
         highlight: "Next race: LA, USA",
     },
     {
         id: 4,
-        icon: "👑",
+        icon: GiTrophy,
         title: "Leader",
         stat: "Oscar Piastri",
         highlight: "Total points: 327pts",
     },
 ];
 
-const divStyles = `border-2 p-4 border-red-500 rounded-lg flex justify-center items-center flex-col hover:bg-white hover:text-red-500 transition-colors duration-300 space-y-2 bg-neutral-900 text-white shadow-md hover:shadow-lg`;
+const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center items-center flex-col hover:bg-gradient-to-br hover:from-red-50 hover:to-white hover:text-red-600 transition-all duration-300 space-y-3 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:border-red-600`;
 
 function HomeStatCards() {
     return (
-        <section className="my-16 px-4 sm:px-6 grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-8 text-lg text-center">
+        <section className="my-16 px-4 sm:px-6 grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-8 text-center">
             {STATS.map((stat) => {
+                const Icon = stat.icon;
                 return (
                     <div className={divStyles} key={stat.id}>
-                        <p className="text-4xl">{stat.icon}</p>
+                        <Icon className="text-4xl text-red-500 mb-3 drop-shadow-lg font-medium" />
                         <p className="text-xl font-semibold">{stat.title}</p>
-                        <p className="text-base">{stat.stat} </p>
+                        <p className="text-base ">{stat.stat} </p>
                         <p>
-                            <strong className="text-red-500 font-medium">
+                            <strong className="text-red-500 font-semibold text-sm">
                                 {stat.highlight}
                             </strong>
                         </p>
