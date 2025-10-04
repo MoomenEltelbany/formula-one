@@ -1,6 +1,7 @@
 import Hero from "../ui/Hero";
 import HomeStatCards from "../ui/HomeStatCards";
 import HomeLeader from "../ui/HomeLeader";
+import HomePodium from "../ui/HomePodium";
 
 function HomePage() {
     return (
@@ -8,6 +9,7 @@ function HomePage() {
             <Hero />
             <HomeStatCards />
             <HomeLeader />
+            <HomePodium />
         </div>
     );
 }
