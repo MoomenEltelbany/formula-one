@@ -2,6 +2,7 @@ import Hero from "../ui/Hero";
 import HomeStatCards from "../ui/HomeStatCards";
 import HomeLeader from "../ui/HomeLeader";
 import HomePodium from "../ui/HomePodium";
+import HomeRace from "../ui/HomeRace";
 
 function HomePage() {
     return (
@@ -10,6 +11,7 @@ function HomePage() {
             <HomeStatCards />
             <HomeLeader />
             <HomePodium />
+            <HomeRace />
         </div>
     );
 }
