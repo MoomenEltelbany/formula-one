@@ -8,19 +8,19 @@ function Hero() {
                 <h1 className="text-red-600 text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
                     🏎️ Welcome to F1 Dashboard
                 </h1>
-                <p className="my-20 text-2xl md:text-3xl lg:text-4xl uppercase font-bold text-white">
+                <p className="my-20 text-2xl md:text-3xl lg:text-4xl font-title font-bold text-white uppercase">
                     Track every race, driver, and team
                 </p>
                 <div className=" space-x-10">
                     <Link
                         to="/drivers"
-                        className="bg-red-600/90 hover:bg-white hover:text-red-600 py-3 px-6 rounded-lg font-bold text-lg cursor-pointer transition-all duration-300"
+                        className="bg-red-600/90 hover:bg-white hover:text-red-600 py-3 px-6 rounded-lg font-body font-bold text-lg cursor-pointer transition-all duration-300"
                     >
                         View Drivers
                     </Link>
                     <Link
                         to="/standings"
-                        className="bg-red-600/90 hover:bg-white hover:text-red-600 py-3 px-6 rounded-lg font-bold text-lg cursor-pointer transition-all duration-300"
+                        className="bg-red-600/90 hover:bg-white hover:text-red-600 py-3 px-6 rounded-lg font-body font-bold text-lg cursor-pointer transition-all duration-300"
                     >
                         View Standings
                     </Link>
