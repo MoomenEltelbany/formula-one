@@ -12,6 +12,11 @@ function DriversHeader() {
                     season — from rising talents to world champions. Get stats,
                     team info, and season highlights in one place.
                 </p>
+                <div className="flex justify-center items-center gap-5 text-red-500 font-semibold my-5">
+                    <p>Total Drivers: 20</p>
+                    <span>|</span>
+                    <p>Active Teams: 10</p>
+                </div>
                 <DriversFilter />
             </main>
         </section>
