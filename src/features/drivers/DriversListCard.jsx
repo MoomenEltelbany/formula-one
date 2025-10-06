@@ -4,7 +4,8 @@ function DriversListCard({ driver }) {
     return (
         <div
             key={driver.driverId}
-            className="relative bg-black rounded-xl overflow-hidden shadow-md hover:shadow-red-500/30 transition-shadow duration-300"
+            className="relative bg-black rounded-xl overflow-hidden shadow-md  transition-shadow duration-300"
+            style={{ boxShadow: `0 4px 6px -1px ${driver.teamColor}4D` }}
         >
             {/* Top accent line with team color */}
             <div
