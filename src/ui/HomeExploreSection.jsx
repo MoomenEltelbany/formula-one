@@ -47,7 +47,6 @@ function HomeExploreSection() {
                     The Race Doesn't End Here 🏁
                 </p>
                 <ul className="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6 mt-10">
-                    {/* <ul className="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-2 mt-6"> */}
                     {ALL_LINKS.map((item) => {
                         const Icon = item.icon;
                         return (
@@ -61,6 +60,7 @@ function HomeExploreSection() {
                                 </p>
                                 <Link
                                     to={item.to}
+                                    aria-label={`Navigate to ${item.label}`}
                                     className="bg-red-600 py-2 px-5 rounded-3xl font-semibold transition-all duration-200 hover:bg-white hover:text-red-600"
                                 >
                                     {item.text}

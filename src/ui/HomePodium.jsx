@@ -33,7 +33,7 @@ function HomePodium() {
                     TOP 3 DRIVERS (PODIUM)
                 </h2>
 
-                <div className="flex flex-col sm:flex-row justify-center items-end gap-6">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                     {DRIVERS.map((driver) => (
                         <div
                             key={driver.name}
@@ -49,6 +49,7 @@ function HomePodium() {
                                 <img
                                     src={driver.image}
                                     alt={driver.name}
+                                    loading="lazy"
                                     className="object-cover object-top w-full h-full"
                                 />
                             </div>
