@@ -1,5 +1,11 @@
+import DriversHeader from "../features/drivers/DriversHeader";
+
 function DriversPage() {
-    return <div>Drivers' Page</div>;
+    return (
+        <div>
+            <DriversHeader />
+        </div>
+    );
 }
 
 export default DriversPage;
