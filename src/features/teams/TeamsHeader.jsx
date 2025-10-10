@@ -13,7 +13,7 @@ function TeamsHeader() {
                     newcomers. Dive into team profiles and race results —
                     everything you need to follow the action, all in one place.
                 </p>
-                <p className="text-center text-red-500 font-semibold my-5">
+                <p className="text-center text-red-500 text-xl font-semibold my-5">
                     Active Teams: 10
                 </p>
                 <TeamsFilter />

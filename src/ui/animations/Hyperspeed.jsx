@@ -69,7 +69,6 @@ const Hyperspeed = ({
                 console.error("Hyperspeed container not found");
                 return;
             }
-            console.log("Hyperspeed container found:", container);
 
             const mountainUniforms = {
                 uFreq: { value: new THREE.Vector3(3, 6, 10) },
@@ -430,11 +429,11 @@ const Hyperspeed = ({
                     this.renderer.setPixelRatio(window.devicePixelRatio);
                     this.composer = new EffectComposer(this.renderer);
                     container.append(this.renderer.domElement);
-                    
+
                     // Style the canvas to fill the container properly
-                    this.renderer.domElement.style.width = '100%';
-                    this.renderer.domElement.style.height = '100%';
-                    this.renderer.domElement.style.display = 'block';
+                    this.renderer.domElement.style.width = "100%";
+                    this.renderer.domElement.style.height = "100%";
+                    this.renderer.domElement.style.display = "block";
 
                     this.camera = new THREE.PerspectiveCamera(
                         options.fov,
@@ -688,10 +687,6 @@ const Hyperspeed = ({
                     }
                     if (updateCamera) {
                         this.camera.updateProjectionMatrix();
-                    }
-
-                    if (this.options.isHyper) {
-                        console.log(this.options.isHyper);
                     }
                 }
 
@@ -1360,13 +1355,11 @@ const Hyperspeed = ({
             const options = { ...effectOptions };
             options.distortion = distortions[options.distortion];
 
-            console.log("Initializing Hyperspeed with options:", options);
             const myApp = new App(container, options);
             appRef.current = myApp;
             myApp
                 .loadAssets()
                 .then(() => {
-                    console.log("Assets loaded, initializing app");
                     myApp.init();
                 })
                 .catch((error) => {

@@ -8,7 +8,7 @@ function StandingHeader() {
                 <p className="text-slate-300 text-2xl my-7">
                     Track who's leading the fight for glory
                 </p>
-                <p className="text-center text-red-500 font-semibold my-5">
+                <p className="text-center text-red-500 text-xl font-semibold my-5">
                     Updated: After Round 18 of 24
                 </p>
             </main>

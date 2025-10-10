@@ -41,11 +41,11 @@ function RaceCard({ race }) {
 
             {/* I made two buttons and not two texts because later depending on the text, we will navigate the user either to the results or the circuit information - We will use Link component later */}
             {race.winner ? (
-                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-700 transition-all duration-200 cursor-pointer">
+                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
                     View Results
                 </button>
             ) : (
-                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-700 transition-all duration-200 cursor-pointer">
+                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
                     View Circuit
                 </button>
             )}

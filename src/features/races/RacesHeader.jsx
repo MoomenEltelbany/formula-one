@@ -10,13 +10,13 @@ function RacesHeader() {
                     dates, circuits, and results all in one place.
                 </p>
                 <div className="flex justify-center items-center gap-8">
-                    <p className="text-center text-red-500 font-semibold my-5">
+                    <p className="text-center text-red-500 text-xl font-semibold my-5">
                         Total: 24
                     </p>
-                    <p className="text-center text-red-500 font-semibold my-5">
+                    <p className="text-center text-red-500 text-xl font-semibold my-5">
                         Completed: 18
                     </p>
-                    <p className="text-center text-red-500 font-semibold my-5">
+                    <p className="text-center text-red-500 text-xl font-semibold my-5">
                         Remaining: 6
                     </p>
                 </div>

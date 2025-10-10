@@ -28,7 +28,7 @@ function NextRace() {
                 </div>
                 <Link
                     to="/races/:123"
-                    className="mt-4 bg-red-500 text-slate-300 py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
+                    className="mt-4 bg-red-600 text-white py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
                 >
                     View Race Details
                 </Link>
