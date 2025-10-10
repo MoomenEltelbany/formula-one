@@ -4,7 +4,6 @@ import TeamListCard from "./TeamListCard";
 
 function TeamsList() {
     const sortedTeams = [...mockTeams].sort((a, b) => b.points - a.points);
-    console.log(sortedTeams);
 
     return (
         <section className="bg-black py-16 text-white">

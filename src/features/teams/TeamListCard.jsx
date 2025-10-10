@@ -7,13 +7,11 @@ function TeamListCard({ team }) {
             className="relative bg-black rounded-xl overflow-hidden shadow-md transition-shadow duration-300 flex flex-col h-full"
             style={{ boxShadow: `0 4px 6px -1px ${team.teamColor}4D` }}
         >
-            {/* Top accent line with team color */}
             <div
                 className="h-1 w-full"
                 style={{ backgroundColor: team.teamColor }}
             ></div>
 
-            {/* Card Content */}
             <div className="p-6 flex flex-col items-center flex-grow">
                 <div
                     className="w-28 h-28 rounded-full border-4 overflow-hidden flex items-center justify-center bg-white"
@@ -33,17 +31,16 @@ function TeamListCard({ team }) {
                 </p>
 
                 <h3 className="text-slate-400 font-semibold">Teams' drivers</h3>
-                <div className="flex justify-center items-center gap-2 pt-4">
+                <div className="flex flex-col justify-center items-center gap-2 pt-4">
                     <Link
                         to="/drivers/driverId"
-                        className="text-red-500 text-md"
+                        className="bg-red-600 text-slate-300 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:text-red-500 hover:bg-slate-100"
                     >
                         {team.drivers[0]}
                     </Link>
-                    <span className="text-red-500">|</span>
                     <Link
                         to="/drivers/driverId"
-                        className="text-red-500 text-md"
+                        className="bg-red-600 text-slate-300 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:text-red-500 hover:bg-slate-300"
                     >
                         {team.drivers[1]}
                     </Link>
@@ -60,7 +57,7 @@ function TeamListCard({ team }) {
                     to={`/teams/${team.teamId}`}
                     className="mt-5 inline-block py-2 px-5 rounded-lg bg-red-600 text-slate-200 hover:bg-white hover:text-red-600 font-semibold transition-colors duration-300"
                 >
-                    View Profile
+                    View Team's Profile
                 </Link>
             </div>
         </div>

@@ -2,8 +2,8 @@ import Hero from "../ui/Hero";
 import HomeStatCards from "../ui/HomeStatCards";
 import HomeLeader from "../ui/HomeLeader";
 import HomePodium from "../ui/HomePodium";
-import HomeRace from "../ui/HomeRace";
 import HomeExploreSection from "../ui/HomeExploreSection";
+import NextRace from "../features/races/NextRace";
 
 function HomePage() {
     return (
@@ -12,7 +12,7 @@ function HomePage() {
             <HomeStatCards />
             <HomeLeader />
             <HomePodium />
-            <HomeRace />
+            <NextRace />
             <HomeExploreSection />
         </div>
     );

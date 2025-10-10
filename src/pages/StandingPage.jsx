@@ -1,5 +1,11 @@
+import StandingHeader from "../features/standings/StandingHeader";
+
 function StandingPage() {
-    return <div>Standing Page</div>;
+    return (
+        <>
+            <StandingHeader />
+        </>
+    );
 }
 
 export default StandingPage;
