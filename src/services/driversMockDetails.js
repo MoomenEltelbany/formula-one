@@ -1,5 +1,3 @@
-// src/utils/mockData.js
-
 // Full 2025 F1 Grid - 20 Drivers
 export const mockDrivers = [
     {
@@ -415,3 +413,20 @@ export const getTeamLogo = (teamId) => {
     };
     return logos[teamId] || "";
 };
+
+export async function getAllDrivers() {
+    const res = await fetch("api/current/drivers");
+
+    const data = await res.json();
+
+    return data;
+}
+
+// A function that return the data of the current champion of F1, that's why We only need the first element
+export async function getDriverChampionship() {
+    const res = await fetch("api/current/drivers-championship?limit=1");
+
+    const data = await res.json();
+
+    return data["drivers_championship"][0];
+}

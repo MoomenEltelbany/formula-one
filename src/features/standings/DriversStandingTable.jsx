@@ -1,4 +1,4 @@
-import { mockDriverStandings } from "../../utils/standingsMockData";
+import { mockDriverStandings } from "../../services/standingsMockData";
 import DriverTableCell from "./DriverTableCell";
 
 function DriversStandingTable() {

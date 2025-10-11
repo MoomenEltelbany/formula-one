@@ -13,6 +13,8 @@ import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
 import AppLayout from "./ui/AppLayout";
 
+import { loader as homeStatLoader } from "./ui/HomeStatCards";
+
 const router = createBrowserRouter([
     {
         element: <AppLayout />,
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <HomePage />,
+                loader: homeStatLoader,
             },
             {
                 path: "drivers",

@@ -1,4 +1,4 @@
-import { mockConstructorStandings } from "../../utils/standingsMockData";
+import { mockConstructorStandings } from "../../services/standingsMockData";
 import ConstructorTableCell from "./ConstructorTableCell";
 
 function ConstructorStanding() {

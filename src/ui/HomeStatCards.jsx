@@ -1,41 +1,48 @@
+/* eslint-disable react-refresh/only-export-components */
 // !All the data here are mock data and need to be updated later with real ones from API
 
 import { GiF1Car, GiCarWheel, GiCheckeredFlag, GiTrophy } from "react-icons/gi";
-
-const STATS = [
-    {
-        id: 1,
-        icon: GiF1Car,
-        title: "20 Drivers",
-        stat: "Most wins this season",
-        highlight: "Oscar Piastri (10 wins)",
-    },
-    {
-        id: 2,
-        icon: GiCarWheel,
-        title: "10 Teams",
-        stat: "Leading team: Mclaren",
-        highlight: "Team Points: 689pts",
-    },
-    {
-        id: 3,
-        icon: GiCheckeredFlag,
-        title: "24 Races",
-        stat: "Completed Races: 18",
-        highlight: "Next race: LA, USA",
-    },
-    {
-        id: 4,
-        icon: GiTrophy,
-        title: "Leader",
-        stat: "Oscar Piastri",
-        highlight: "Total points: 327pts",
-    },
-];
+import {
+    getAllDrivers,
+    getDriverChampionship,
+} from "../services/driversMockDetails";
 
 const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center items-center flex-col hover:bg-gradient-to-br hover:from-red-50 hover:to-white hover:text-red-600 transition-all duration-300 space-y-3 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:border-red-600`;
 
-function HomeStatCards() {
+function HomeStatCards({ drivers, currentChampion }) {
+    const championData = currentChampion;
+
+    const STATS = [
+        {
+            id: 1,
+            icon: GiF1Car,
+            title: `${drivers.total} Drivers`,
+            stat: "Most wins this season",
+            highlight: "Oscar Piastri (10 wins)",
+        },
+        {
+            id: 2,
+            icon: GiCarWheel,
+            title: "10 Teams",
+            stat: "Leading team: Mclaren",
+            highlight: "Team Points: 689pts",
+        },
+        {
+            id: 3,
+            icon: GiCheckeredFlag,
+            title: "24 Races",
+            stat: "Completed Races: 18",
+            highlight: "Next race: LA, USA",
+        },
+        {
+            id: 4,
+            icon: GiTrophy,
+            title: "Leader",
+            stat: `${championData.driver.name} ${championData.driver.surname}`,
+            highlight: `Total points: ${championData.points}pts`,
+        },
+    ];
+
     return (
         <section className="my-16 px-4 sm:px-6 grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-8 text-center">
             {STATS.map((stat) => {
@@ -55,6 +62,15 @@ function HomeStatCards() {
             })}
         </section>
     );
+}
+
+export async function loader() {
+    const [drivers, currentChampion] = await Promise.all([
+        getAllDrivers(),
+        getDriverChampionship(),
+    ]);
+
+    return { drivers, currentChampion };
 }
 
 export default HomeStatCards;

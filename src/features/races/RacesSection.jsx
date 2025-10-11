@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getRacesByStatus } from "../../utils/racesMockDetails";
+import { getRacesByStatus } from "../../services/racesMockDetails";
 import RaceCard from "./RaceCard";
 import RacesFilter from "./RacesFilter";
 

@@ -4,12 +4,18 @@ import HomeLeader from "../ui/HomeLeader";
 import HomePodium from "../ui/HomePodium";
 import HomeExploreSection from "../ui/HomeExploreSection";
 import NextRace from "../features/races/NextRace";
+import { useLoaderData } from "react-router-dom";
 
 function HomePage() {
+    const { drivers, currentChampion } = useLoaderData();
+
     return (
         <div className="bg-black">
             <Hero />
-            <HomeStatCards />
+            <HomeStatCards
+                drivers={drivers}
+                currentChampion={currentChampion}
+            />
             <HomeLeader />
             <HomePodium />
             <NextRace />

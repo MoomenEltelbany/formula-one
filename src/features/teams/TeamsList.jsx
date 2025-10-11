@@ -1,4 +1,4 @@
-import { mockTeams } from "../../utils/teamsMockDetails";
+import { mockTeams } from "../../services/teamsMockDetails";
 
 import TeamListCard from "./TeamListCard";
 
