@@ -1,31 +1,40 @@
-const DRIVERS = [
-    {
-        position: 2,
-        name: "Lando Norris",
-        team: "Mclaren",
-        points: 285,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro_%28cropped2%29.jpg/1024px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro_%28cropped2%29.jpg",
-        teamColor: "border-orange-500",
-    },
-    {
-        position: 1,
-        name: "Max Verstappen",
-        team: "Red Bull Racing",
-        points: 575,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_%28medium_crop%29.jpg/1024px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_%28medium_crop%29.jpg",
-        teamColor: "border-blue-500",
-    },
-    {
-        position: 3,
-        name: "Lewis Hamilton",
-        team: "Mercedes AMG",
-        points: 275,
-        image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Lewis_Hamilton_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg",
-        teamColor: "border-gray-400",
-    },
-];
+import { getDriverImage } from "../services/driversMockDetails";
 
-function HomePodium() {
+function HomePodium({ currentChampions }) {
+    const { topThreeDrivers } = currentChampions;
+
+    console.log(topThreeDrivers);
+
+    const DRIVERS = [
+        {
+            position: 2,
+            name: `${topThreeDrivers[1].driver.name} ${topThreeDrivers[1].driver.surname}`,
+            team: `${topThreeDrivers[1].team.teamName}`,
+            points: `${topThreeDrivers[1].points}`,
+            image: getDriverImage(
+                `${topThreeDrivers[1].driver.name} ${topThreeDrivers[1].driver.surname}`
+            ),
+        },
+        {
+            position: 1,
+            name: `${topThreeDrivers[0].driver.name} ${topThreeDrivers[0].driver.surname}`,
+            team: `${topThreeDrivers[0].team.teamName}`,
+            points: `${topThreeDrivers[0].points}`,
+            image: getDriverImage(
+                `${topThreeDrivers[0].driver.name} ${topThreeDrivers[0].driver.surname}`
+            ),
+        },
+        {
+            position: 3,
+            name: `${topThreeDrivers[2].driver.name} ${topThreeDrivers[2].driver.surname}`,
+            team: `${topThreeDrivers[2].team.teamName}`,
+            points: `${topThreeDrivers[2].points}`,
+            image: getDriverImage(
+                `${topThreeDrivers[2].driver.name} ${topThreeDrivers[2].driver.surname}`
+            ),
+        },
+    ];
+
     return (
         <section className="bg-black py-16 text-white">
             <main className=" bg-neutral-900 m-4 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto px-4 text-center">
@@ -37,7 +46,7 @@ function HomePodium() {
                     {DRIVERS.map((driver) => (
                         <div
                             key={driver.name}
-                            className={`flex flex-col items-center bg-black rounded-xl border-2 ${driver.teamColor} shadow-lg p-4 w-56 transition-transform hover:scale-105`}
+                            className={`flex flex-col items-center bg-black rounded-xl border-2 border-slate-700 shadow-lg p-4 w-56 transition-transform hover:scale-105`}
                             style={{
                                 height:
                                     driver.position === 1 ? "340px" : "300px",
@@ -59,7 +68,7 @@ function HomePodium() {
                             <p className="text-sm text-gray-400">
                                 {driver.team}
                             </p>
-                            <p className="text-lg font-semibold mt-2">
+                            <p className="text-lg font-semibold mt-2 text-red-500">
                                 {driver.points} pts
                             </p>
                             <span className="mt-auto text-sm opacity-80">

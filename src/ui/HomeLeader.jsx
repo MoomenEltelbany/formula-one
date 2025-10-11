@@ -3,8 +3,8 @@ import {
     getDriverTeamLogo,
 } from "../services/driversMockDetails";
 
-function HomeLeader({ currentChampion }) {
-    const { topWinner } = currentChampion;
+function HomeLeader({ currentChampions }) {
+    const { topWinner } = currentChampions;
 
     const image = getDriverImage(
         `${topWinner.driver.name} ${topWinner.driver.surname}`

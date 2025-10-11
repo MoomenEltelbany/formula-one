@@ -26,12 +26,12 @@ const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center
 
 function HomeStatCards({
     drivers,
-    currentChampion,
+    currentChampions,
     teams,
     currentTopTeam,
     raceData,
 }) {
-    const { currentLeader, topWinner } = currentChampion;
+    const { currentLeader, topWinner } = currentChampions;
 
     const { points: teamPoints, team: teamData } = currentTopTeam;
 
@@ -90,16 +90,29 @@ function HomeStatCards({
 }
 
 export async function loader() {
-    const [drivers, currentChampion, teams, currentTopTeam, raceData] =
-        await Promise.all([
-            fetchAllDrivers(),
-            fetchDriverChampionshipStats(),
-            fetchAllTeams(),
-            fetchTeamChampionshipStats(),
-            fetchAllRaces(),
-        ]);
+    const [
+        drivers,
+        currentChampions,
+        teams,
+        currentTopTeam,
+        raceData,
+        topThreeDrivers,
+    ] = await Promise.all([
+        fetchAllDrivers(),
+        fetchDriverChampionshipStats(),
+        fetchAllTeams(),
+        fetchTeamChampionshipStats(),
+        fetchAllRaces(),
+    ]);
 
-    return { drivers, currentChampion, teams, currentTopTeam, raceData };
+    return {
+        drivers,
+        currentChampions,
+        teams,
+        currentTopTeam,
+        raceData,
+        topThreeDrivers,
+    };
 }
 
 export default HomeStatCards;
