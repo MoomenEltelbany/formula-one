@@ -90,20 +90,14 @@ function HomeStatCards({
 }
 
 export async function loader() {
-    const [
-        drivers,
-        currentChampions,
-        teams,
-        currentTopTeam,
-        raceData,
-        topThreeDrivers,
-    ] = await Promise.all([
-        fetchAllDrivers(),
-        fetchDriverChampionshipStats(),
-        fetchAllTeams(),
-        fetchTeamChampionshipStats(),
-        fetchAllRaces(),
-    ]);
+    const [drivers, currentChampions, teams, currentTopTeam, raceData] =
+        await Promise.all([
+            fetchAllDrivers(),
+            fetchDriverChampionshipStats(),
+            fetchAllTeams(),
+            fetchTeamChampionshipStats(),
+            fetchAllRaces(),
+        ]);
 
     return {
         drivers,
@@ -111,7 +105,6 @@ export async function loader() {
         teams,
         currentTopTeam,
         raceData,
-        topThreeDrivers,
     };
 }
 
