@@ -1,3 +1,5 @@
+import ErrorPage from "../pages/ErrorPage";
+
 export const mockTeams = [
     {
         teamId: "1124",
@@ -120,3 +122,23 @@ export const mockTeams = [
         image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/Atlassian_Williams_Racing_2025.svg/2880px-Atlassian_Williams_Racing_2025.svg.png",
     },
 ];
+
+export async function fetchAllTeams() {
+    const res = await fetch("api/current/teams");
+
+    if (!res.ok) throw new Error("Failed to fetch current teams");
+
+    const data = await res.json();
+
+    return data;
+}
+
+export async function fetchTeamChampionshipStats() {
+    const res = await fetch("api/current/constructors-championship");
+
+    if (!res.ok) throw new Error("Failed to fetch the top team");
+
+    const data = await res.json();
+
+    return data["constructors_championship"][0];
+}

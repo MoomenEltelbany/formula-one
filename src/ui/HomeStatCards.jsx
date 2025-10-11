@@ -5,39 +5,65 @@ import {
     fetchAllDrivers,
     fetchDriverChampionshipStats,
 } from "../services/driversMockDetails";
+import {
+    fetchAllTeams,
+    fetchTeamChampionshipStats,
+} from "../services/teamsMockDetails";
+import LoadingSpinner from "./LoadingSpinner";
+import { fetchAllRaces } from "../services/racesMockDetails";
 
 const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center items-center flex-col hover:bg-gradient-to-br hover:from-red-50 hover:to-white hover:text-red-600 transition-all duration-300 space-y-3 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:border-red-600`;
 
-function HomeStatCards({ drivers, currentChampion }) {
+/*
+    HomeStatCards Component
+
+    Displays key statistics for the Home screen:
+        - drivers: All current drivers registered on the grid
+        - currentChampion: Contains both the current points leader and the driver with the most wins
+        - teams: All current teams participating in the season
+        - currentTopTeam: The leading team along with its total championship points
+*/
+
+function HomeStatCards({
+    drivers,
+    currentChampion,
+    teams,
+    currentTopTeam,
+    raceData,
+}) {
     const { currentLeader, topWinner } = currentChampion;
+
+    const { points: teamPoints, team: teamData } = currentTopTeam;
+
+    const { races, completedRacesCount, nextRaceName } = raceData;
 
     const STATS = [
         {
             id: 1,
             icon: GiF1Car,
             title: `${drivers.total} Drivers`,
-            stat: "Most wins this season",
+            label: "Most wins this season",
             highlight: `${topWinner.driver.name} ${topWinner.driver.surname}: ${topWinner.wins} wins`,
         },
         {
             id: 2,
             icon: GiCarWheel,
-            title: "10 Teams",
-            stat: "Leading team: Mclaren",
-            highlight: "Team Points: 689pts",
+            title: `${teams.total} Teams`,
+            label: `Leading team: ${teamData.teamName}`,
+            highlight: `Team Points: ${teamPoints}pts`,
         },
         {
             id: 3,
             icon: GiCheckeredFlag,
-            title: "24 Races",
-            stat: "Completed Races: 18",
-            highlight: "Next race: LA, USA",
+            title: `${races.total} Races`,
+            label: `Completed Races: ${completedRacesCount}`,
+            highlight: `Next race: ${nextRaceName}`,
         },
         {
             id: 4,
             icon: GiTrophy,
             title: "Leader",
-            stat: `${currentLeader.driver.name} ${currentLeader.driver.surname}`,
+            label: `${currentLeader.driver.name} ${currentLeader.driver.surname}`,
             highlight: `Total points: ${currentLeader.points}pts`,
         },
     ];
@@ -50,9 +76,9 @@ function HomeStatCards({ drivers, currentChampion }) {
                     <div className={divStyles} key={stat.id}>
                         <Icon className="text-4xl text-red-500 mb-3 drop-shadow-lg font-medium" />
                         <p className="text-xl font-semibold">{stat.title}</p>
-                        <p className="text-base ">{stat.stat} </p>
+                        <p className="text-base font-bold">{stat.label} </p>
                         <p>
-                            <strong className="text-red-500 font-semibold text-sm">
+                            <strong className="text-red-500 font-semibold text-md">
                                 {stat.highlight}
                             </strong>
                         </p>
@@ -64,12 +90,16 @@ function HomeStatCards({ drivers, currentChampion }) {
 }
 
 export async function loader() {
-    const [drivers, currentChampion] = await Promise.all([
-        fetchAllDrivers(),
-        fetchDriverChampionshipStats(),
-    ]);
+    const [drivers, currentChampion, teams, currentTopTeam, raceData] =
+        await Promise.all([
+            fetchAllDrivers(),
+            fetchDriverChampionshipStats(),
+            fetchAllTeams(),
+            fetchTeamChampionshipStats(),
+            fetchAllRaces(),
+        ]);
 
-    return { drivers, currentChampion };
+    return { drivers, currentChampion, teams, currentTopTeam, raceData };
 }
 
 export default HomeStatCards;

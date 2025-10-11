@@ -79,8 +79,8 @@ export const mockRaces = [
 ];
 
 // Helper: Get next race
-export const getNextRace = () => {
-    return mockRaces.find((race) => race.status === "next");
+export const getNextRace = (races, completedRaces) => {
+    return races[completedRaces];
 };
 
 // Helper: Get upcoming races
@@ -91,9 +91,8 @@ export const getUpcomingRaces = () => {
 };
 
 // Helper: Get completed races
-export const getCompletedRaces = () => {
-    return mockRaces.filter((race) => race.status === "completed");
-};
+export const getCompletedRaces = (allRaces) =>
+    allRaces.races.filter((race) => race.winner !== null).length;
 
 export function getRacesByStatus(status) {
     if (status === "all") return mockRaces;
@@ -109,3 +108,22 @@ export const getDaysUntil = (raceDate) => {
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays;
 };
+
+export async function fetchAllRaces() {
+    const res = await fetch("api/2025");
+    if (!res.ok) throw new Error("Failed to fetch the races");
+
+    const races = await res.json();
+    let completedRacesCount = getCompletedRaces(races);
+
+    // Here I added this manually because the API is omitting the results of the race number 6, the API is giving null to everything and this is ruining all my logic for race number, next race and everything, that's why I added here on manually
+    completedRacesCount++;
+
+    const nextRace = races.races[completedRacesCount];
+
+    const nextRaceName = nextRace
+        ? nextRace.circuit.circuitName
+        : "Season Complete";
+
+    return { races, completedRacesCount, nextRaceName };
+}

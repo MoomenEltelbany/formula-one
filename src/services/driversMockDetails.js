@@ -17,7 +17,7 @@ export const mockDrivers = [
         position: 1,
         wins: 7,
         podiums: 15,
-        image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Oscar_Piastri_2024_%28cropped%29.jpg",
+        image: "https://uploadhttps://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000000/common/f1/2025/mclaren/oscpia01/2025mclarenoscpia01right.webp.wikimedia.org/wikipedia/commons/2/29/Oscar_Piastri_2024_%28cropped%29.jpg",
     },
     {
         id: "norris",

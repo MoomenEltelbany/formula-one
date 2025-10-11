@@ -4,7 +4,9 @@ const IMAGE =
 const TEAM_IMAGE =
     "https://upload.wikimedia.org/wikipedia/en/4/44/Red_bull_racing.png";
 
-function HomeLeader() {
+function HomeLeader({ currentChampion }) {
+    // console.log(currentChampion);
+
     return (
         <section className="bg-black py-12">
             <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white relative">
