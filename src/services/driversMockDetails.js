@@ -17,7 +17,7 @@ export const mockDrivers = [
         position: 1,
         wins: 7,
         podiums: 15,
-        image: "https://uploadhttps://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000000/common/f1/2025/mclaren/oscpia01/2025mclarenoscpia01right.webp.wikimedia.org/wikipedia/commons/2/29/Oscar_Piastri_2024_%28cropped%29.jpg",
+        image: "https://media.gettyimages.com/id/2172131554/photo/f1-grand-prix-of-azerbaijan.jpg?s=1024x1024&w=gi&k=20&c=WAYXKC9bzV4KfzkUmiAACK_4NSBPL6alDSi11UpdLeQ=",
     },
     {
         id: "norris",
@@ -112,7 +112,7 @@ export const mockDrivers = [
         position: 6,
         wins: 0,
         podiums: 2,
-        image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Lewis_Hamilton_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg",
+        image: "https://media.gettyimages.com/id/2226794707/photo/f1-grand-prix-of-belgium-previews.jpg?s=1024x1024&w=gi&k=20&c=B9Yw1HvoMqbXP6B6BL0JUcHKBvIJ2yeB69hXbDWsxx4=",
     },
     {
         id: "antonelli",
@@ -131,7 +131,7 @@ export const mockDrivers = [
         position: 7,
         wins: 0,
         podiums: 1,
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Antonelli_Barcelona_2024_%28cropped%29.jpg",
+        image: "https://media.gettyimages.com/id/2220297608/photo/f1-grand-prix-of-canada.jpg?s=1024x1024&w=gi&k=20&c=YMKr9wMnjPmSWSNRL2Y5hcIUzA4UZGu38hR-ol7JC20=",
     },
     {
         id: "albon",
@@ -150,7 +150,7 @@ export const mockDrivers = [
         position: 8,
         wins: 0,
         podiums: 1,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Alex_Albon_%28cropped%29.jpg/1280px-Alex_Albon_%28cropped%29.jpg",
+        image: "https://media.gettyimages.com/id/2209253535/photo/f1-grand-prix-of-bahrain-practice.jpg?s=1024x1024&w=gi&k=20&c=3WAsvDHbE5DPP5MKK9frxxi_WVwwZi22aTb4tYpZt-U=",
     },
     {
         id: "hadjar",
@@ -169,7 +169,7 @@ export const mockDrivers = [
         position: 9,
         wins: 0,
         podiums: 1,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Isack_Hadjar_2022.JPG/1280px-Isack_Hadjar_2022.JPG",
+        image: "https://media.gettyimages.com/id/2233019068/photo/f1-grand-prix-of-netherlands.jpg?s=1024x1024&w=gi&k=20&c=xOw7llCsbCy7dBzyOT5pMTYS5On183OrquTbmHTLJlw=",
     },
 
     {
@@ -189,7 +189,7 @@ export const mockDrivers = [
         position: 10,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Nico_Hulkenberg_2016_Malaysia.jpg",
+        image: "https://media.gettyimages.com/id/2223818229/photo/f1-grand-prix-of-great-britain.jpg?s=1024x1024&w=gi&k=20&c=3-sUdtDk01WOPfc5CCW8VuUnIjHw1kjlYAtOVA6MgTQ=",
     },
 
     {
@@ -229,7 +229,7 @@ export const mockDrivers = [
         position: 12,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Formula1Gabelhofen2022_%2804%29_%28cropped2%29.jpg/1280px-Formula1Gabelhofen2022_%2804%29_%28cropped2%29.jpg",
+        image: "https://media.gettyimages.com/id/2202024588/photo/formula-1-testing-in-bahrain-day-1.jpg?s=1024x1024&w=gi&k=20&c=htdxMJuy7ZgdSgL8u3pxpRxjiiu4WO8jDl35XIC4Ces=",
     },
 
     {
@@ -249,7 +249,7 @@ export const mockDrivers = [
         position: 13,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Liam_Lawson_Austria_2022.jpg",
+        image: "https://media.gettyimages.com/id/2222617911/photo/f1-grand-prix-of-austria-qualifying.jpg?s=1024x1024&w=gi&k=20&c=6VphvpGjr9R36Ix3EBJ54xJR8YQoIOX4XArlmNlTkVs=",
     },
 
     {
@@ -269,7 +269,7 @@ export const mockDrivers = [
         position: 14,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Alonso-68_%2824710447098%29.jpg/500px-Alonso-68_%2824710447098%29.jpg",
+        image: "https://media.gettyimages.com/id/2208729848/photo/f1-grand-prix-of-japan.jpg?s=1024x1024&w=gi&k=20&c=QvC1TtP86pMxYk9g98reHy94YuWqNMPNd8qT8mfW55Y=",
     },
 
     {
@@ -289,7 +289,7 @@ export const mockDrivers = [
         position: 15,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/FIA_F1_Austria_2022_Drivers_Parade_%281%29_%28Ocon_crop%29.jpg",
+        image: "https://media.gettyimages.com/id/2202023158/photo/formula-1-testing-in-bahrain-day-1.jpg?s=1024x1024&w=gi&k=20&c=-HzorQeTMPPxXyfhqnq15yIr9q6m8Ljyyv7dFFLGa5M=",
     },
 
     {
@@ -309,7 +309,7 @@ export const mockDrivers = [
         position: 16,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/2022_French_Grand_Prix_%2852279065728%29_%28midcrop%29.png/500px-2022_French_Grand_Prix_%2852279065728%29_%28midcrop%29.png",
+        image: "https://media.gettyimages.com/id/2068751820/photo/f1-grand-prix-of-saudi-arabia-qualifying.jpg?s=1024x1024&w=gi&k=20&c=pMgZ2iTSKy4fLAQPUPYhgI5St_4LD85iVBI6954hfFo=",
     },
 
     {
@@ -329,7 +329,7 @@ export const mockDrivers = [
         position: 17,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/2021_US_GP%2C_Tsunoda.jpg",
+        image: "https://media.gettyimages.com/id/2208077006/photo/oracle-red-bull-racing-show-run-in-tokyo.jpg?s=1024x1024&w=gi&k=20&c=moLcGfaBaDRMjbKoNF9PaRLRiR0UQxBbnqUoRZmzg8Y=",
     },
     {
         id: "bortoleto",
@@ -348,7 +348,7 @@ export const mockDrivers = [
         position: null,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Gabriel_Bortoleto_%28cropped%29.jpg",
+        image: "https://media.gettyimages.com/id/2204660991/photo/f1-grand-prix-of-australia-previews.jpg?s=1024x1024&w=gi&k=20&c=oNvtchzEJzHVjIcKc0P57j_KtFmMuG7JkLueZEoD80s=",
     },
     {
         id: "bearman",
@@ -367,7 +367,7 @@ export const mockDrivers = [
         position: null,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday_%28cropped%29.jpg/1024px-2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday_%28cropped%29.jpg", // placeholder
+        image: "https://media.gettyimages.com/id/2160590389/photo/oliver-bearman-signs-haas-f1-contract.jpg?s=1024x1024&w=gi&k=20&c=wuuGNuCOhoSx0pBKNmcg2GpfglQ6bTGue2BH7-FXiuc=", // placeholder
     },
     {
         id: "colapinto",
@@ -386,7 +386,7 @@ export const mockDrivers = [
         position: null,
         wins: 0,
         podiums: 0,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Conferencia_de_prensa_Colapinto_ACA_octubre_2023_-_BugWarp_%2813%29_%28cropped%29.jpg/1024px-Conferencia_de_prensa_Colapinto_ACA_octubre_2023_-_BugWarp_%2813%29_%28cropped%29.jpg", // placeholder
+        image: "https://media.gettyimages.com/id/2206453956/photo/f1-grand-prix-of-china.jpg?s=1024x1024&w=gi&k=20&c=ua2it8Qtrgzf-_JpdI5owDYeBoPn-chOM8fl_x7zcjY=", // placeholder
     },
 ];
 
@@ -413,6 +413,79 @@ export const getTeamLogo = (teamId) => {
     };
     return logos[teamId] || "";
 };
+
+const driversImages = {
+    "Oscar Piastri":
+        "https://media.gettyimages.com/id/2172131554/photo/f1-grand-prix-of-azerbaijan.jpg?s=1024x1024&w=gi&k=20&c=WAYXKC9bzV4KfzkUmiAACK_4NSBPL6alDSi11UpdLeQ=",
+    "Lando Norris":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro_%28cropped2%29.jpg/500px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro_%28cropped2%29.jpg",
+    "Lewis Hamilton":
+        "https://media.gettyimages.com/id/2226794707/photo/f1-grand-prix-of-belgium-previews.jpg?s=1024x1024&w=gi&k=20&c=B9Yw1HvoMqbXP6B6BL0JUcHKBvIJ2yeB69hXbDWsxx4=",
+    "Max Verstappen":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_%28medium_crop%29.jpg/1280px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_%28medium_crop%29.jpg",
+    "George Russell":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/KingsLeonSilverstne040724_%2828_of_112%29_%2853838006028%29_%28cropped%29.jpg/1280px-KingsLeonSilverstne040724_%2828_of_112%29_%2853838006028%29_%28cropped%29.jpg",
+    "Charles Leclerc":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg/1280px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg",
+    "Kimi Antonelli":
+        "https://media.gettyimages.com/id/2220297608/photo/f1-grand-prix-of-canada.jpg?s=1024x1024&w=gi&k=20&c=YMKr9wMnjPmSWSNRL2Y5hcIUzA4UZGu38hR-ol7JC20=",
+    "Alexander Albon":
+        "https://media.gettyimages.com/id/2209253535/photo/f1-grand-prix-of-bahrain-practice.jpg?s=1024x1024&w=gi&k=20&c=3WAsvDHbE5DPP5MKK9frxxi_WVwwZi22aTb4tYpZt-U=",
+    "Isack Hadjar":
+        "https://media.gettyimages.com/id/2233019068/photo/f1-grand-prix-of-netherlands.jpg?s=1024x1024&w=gi&k=20&c=xOw7llCsbCy7dBzyOT5pMTYS5On183OrquTbmHTLJlw=",
+    "Nico Hülkenberg":
+        "https://media.gettyimages.com/id/2223818229/photo/f1-grand-prix-of-great-britain.jpg?s=1024x1024&w=gi&k=20&c=3-sUdtDk01WOPfc5CCW8VuUnIjHw1kjlYAtOVA6MgTQ=",
+    "Lance Stroll":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/2025_Japan_GP_-_Aston_Martin_-_Lance_Stroll_-_Fanzone_Stage_%28cropped%29.jpg/1280px-2025_Japan_GP_-_Aston_Martin_-_Lance_Stroll_-_Fanzone_Stage_%28cropped%29.jpg",
+    "Carlos Sainz":
+        "https://media.gettyimages.com/id/2202024588/photo/formula-1-testing-in-bahrain-day-1.jpg?s=1024x1024&w=gi&k=20&c=htdxMJuy7ZgdSgL8u3pxpRxjiiu4WO8jDl35XIC4Ces=",
+    "Liam Lawson":
+        "https://media.gettyimages.com/id/2222617911/photo/f1-grand-prix-of-austria-qualifying.jpg?s=1024x1024&w=gi&k=20&c=6VphvpGjr9R36Ix3EBJ54xJR8YQoIOX4XArlmNlTkVs=",
+    "Fernando Alonso":
+        "https://media.gettyimages.com/id/2208729848/photo/f1-grand-prix-of-japan.jpg?s=1024x1024&w=gi&k=20&c=QvC1TtP86pMxYk9g98reHy94YuWqNMPNd8qT8mfW55Y=",
+    "Esteban Ocon":
+        "https://media.gettyimages.com/id/2202023158/photo/formula-1-testing-in-bahrain-day-1.jpg?s=1024x1024&w=gi&k=20&c=-HzorQeTMPPxXyfhqnq15yIr9q6m8Ljyyv7dFFLGa5M=",
+    "Pierre Gasly":
+        "https://media.gettyimages.com/id/2068751820/photo/f1-grand-prix-of-saudi-arabia-qualifying.jpg?s=1024x1024&w=gi&k=20&c=pMgZ2iTSKy4fLAQPUPYhgI5St_4LD85iVBI6954hfFo=",
+    "Yuki Tsunoda":
+        "https://media.gettyimages.com/id/2208077006/photo/oracle-red-bull-racing-show-run-in-tokyo.jpg?s=1024x1024&w=gi&k=20&c=moLcGfaBaDRMjbKoNF9PaRLRiR0UQxBbnqUoRZmzg8Y=",
+    "Gabriel Bortoleto":
+        "https://media.gettyimages.com/id/2204660991/photo/f1-grand-prix-of-australia-previews.jpg?s=1024x1024&w=gi&k=20&c=oNvtchzEJzHVjIcKc0P57j_KtFmMuG7JkLueZEoD80s=",
+    "Oliver Bearman":
+        "https://media.gettyimages.com/id/2160590389/photo/oliver-bearman-signs-haas-f1-contract.jpg?s=1024x1024&w=gi&k=20&c=wuuGNuCOhoSx0pBKNmcg2GpfglQ6bTGue2BH7-FXiuc=",
+    "Franco Colapinto":
+        "https://media.gettyimages.com/id/2206453956/photo/f1-grand-prix-of-china.jpg?s=1024x1024&w=gi&k=20&c=ua2it8Qtrgzf-_JpdI5owDYeBoPn-chOM8fl_x7zcjY=",
+};
+
+const constructorImages = {
+    mclaren:
+        "https://media.gettyimages.com/id/1238737260/photo/f1-winter-testing-in-barcelona-day-2.jpg?s=1024x1024&w=gi&k=20&c=4Mujh_0lSLFwLCW0IDYj0Fw6_wATrlNwkiXnrZn5YGc=",
+    red_bull:
+        "https://upload.wikimedia.org/wikipedia/en/4/44/Red_bull_racing.png",
+    haas: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Haas_F1_Team_Logo.svg/200px-Haas_F1_Team_Logo.svg.png",
+    williams:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Williams_Racing_logo.svg/200px-Williams_Racing_logo.svg.png",
+    aston_martin:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Aston_Martin_Aramco_Cognizant_F1.svg/200px-Aston_Martin_Aramco_Cognizant_F1.svg.png",
+    mercedes:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg/200px-Mercedes_AMG_Petronas_F1_Logo.svg.png",
+    ferrari:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Scuderia_Ferrari_Logo.svg/200px-Scuderia_Ferrari_Logo.svg.png",
+    "racing bulls":
+        "https://media.gettyimages.com/id/2210079830/photo/f1-grand-prix-of-saudi-arabia-previews.jpg?s=1024x1024&w=gi&k=20&c=4IID1ZILoJLfk3OZW38EpycO1u3XUTfVdj48et7rfWU=",
+    sauber: "https://media.gettyimages.com/id/2174006919/photo/formula-one-testing-preparations-jerez-spain-monday-27-january-2014.jpg?s=1024x1024&w=gi&k=20&c=Yct-E6_0uiae7bgCfqwyQU11Bl3tqwtzqeYk_ZdFTzo=",
+    alpine: "https://media.gettyimages.com/id/2037139608/photo/bahrain-grand-prix-preview-day-bahrain-international-circuit.jpg?s=1024x1024&w=gi&k=20&c=WbPyoBMG8Ki7BTYJXsJ0AmbPY-S_rWldSqiRi6Irr1s=",
+};
+
+// Function that take the driver's full name and bring back his photo from the driversImages object
+export function getDriverImage(name) {
+    return driversImages[name];
+}
+
+// Function that take the teams's ID and bring back the logo of the team from the constructorImages object
+export function getDriverTeamLogo(name) {
+    return constructorImages[name];
+}
 
 /*
     Fetches all the drivers of the current year

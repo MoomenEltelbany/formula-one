@@ -10,8 +10,6 @@ function HomePage() {
     const { drivers, currentChampion, teams, currentTopTeam, raceData } =
         useLoaderData();
 
-    console.log(drivers);
-
     return (
         <div className="bg-black">
             <Hero />
