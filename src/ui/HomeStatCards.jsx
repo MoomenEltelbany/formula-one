@@ -2,14 +2,14 @@
 
 import { GiF1Car, GiCarWheel, GiCheckeredFlag, GiTrophy } from "react-icons/gi";
 import {
-    getAllDrivers,
-    getDriverChampionship,
+    fetchAllDrivers,
+    fetchDriverChampionshipStats,
 } from "../services/driversMockDetails";
 
 const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center items-center flex-col hover:bg-gradient-to-br hover:from-red-50 hover:to-white hover:text-red-600 transition-all duration-300 space-y-3 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:border-red-600`;
 
 function HomeStatCards({ drivers, currentChampion }) {
-    const { champion, wins } = currentChampion;
+    const { currentLeader, topWinner } = currentChampion;
 
     const STATS = [
         {
@@ -17,7 +17,7 @@ function HomeStatCards({ drivers, currentChampion }) {
             icon: GiF1Car,
             title: `${drivers.total} Drivers`,
             stat: "Most wins this season",
-            highlight: `${wins.driver.name} ${wins.driver.surname}: ${wins.wins} wins`,
+            highlight: `${topWinner.driver.name} ${topWinner.driver.surname}: ${topWinner.wins} wins`,
         },
         {
             id: 2,
@@ -37,8 +37,8 @@ function HomeStatCards({ drivers, currentChampion }) {
             id: 4,
             icon: GiTrophy,
             title: "Leader",
-            stat: `${champion.driver.name} ${champion.driver.surname}`,
-            highlight: `Total points: ${champion.points}pts`,
+            stat: `${currentLeader.driver.name} ${currentLeader.driver.surname}`,
+            highlight: `Total points: ${currentLeader.points}pts`,
         },
     ];
 
@@ -65,8 +65,8 @@ function HomeStatCards({ drivers, currentChampion }) {
 
 export async function loader() {
     const [drivers, currentChampion] = await Promise.all([
-        getAllDrivers(),
-        getDriverChampionship(),
+        fetchAllDrivers(),
+        fetchDriverChampionshipStats(),
     ]);
 
     return { drivers, currentChampion };

@@ -414,22 +414,36 @@ export const getTeamLogo = (teamId) => {
     return logos[teamId] || "";
 };
 
-export async function getAllDrivers() {
+/*
+    Fetches all the drivers of the current year
+ */
+export async function fetchAllDrivers() {
     const res = await fetch("api/current/drivers");
+
+    if (!res.ok) throw new Error("Failed to fetch the drivers");
 
     const data = await res.json();
 
     return data;
 }
 
-// ?A function that return the data of the current champion of F1, that's why We only need the first element
-export async function getDriverChampionship() {
-    const res = await fetch("api/current/drivers-championship?limit=10");
+/*
+    Fetches the top 5 drivers in the championship and returns:
+        - championshipLeader: the driver currently leading in points
+        - topWinner: the driver with the most wins
+ */
+export async function fetchDriverChampionshipStats() {
+    const res = await fetch("api/current/drivers-championship?limit=5");
+
+    if (!res.ok) throw new Error("Failed to fetch the current champion");
 
     const data = await res.json();
 
-    const mostWinsDriver = data["drivers_championship"].reduce((top, driver) =>
+    const topWinner = data["drivers_championship"].reduce((top, driver) =>
         driver.wins > top.wins ? driver : top
     );
-    return { champion: data["drivers_championship"][0], wins: mostWinsDriver };
+    return {
+        currentLeader: data["drivers_championship"][0],
+        topWinner,
+    };
 }
