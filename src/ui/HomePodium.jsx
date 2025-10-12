@@ -3,37 +3,17 @@ import { getDriverImage } from "../services/driversMockDetails";
 function HomePodium({ currentChampions }) {
     const { topThreeDrivers } = currentChampions;
 
-    console.log(topThreeDrivers);
+    const DRIVERS = topThreeDrivers.map((driverData, index) => ({
+        position: index + 1,
+        name: `${driverData.driver.name} ${driverData.driver.surname}`,
+        team: driverData.team.teamName,
+        points: driverData.points,
+        image: getDriverImage(
+            `${driverData.driver.name} ${driverData.driver.surname}`
+        ),
+    }));
 
-    const DRIVERS = [
-        {
-            position: 2,
-            name: `${topThreeDrivers[1].driver.name} ${topThreeDrivers[1].driver.surname}`,
-            team: `${topThreeDrivers[1].team.teamName}`,
-            points: `${topThreeDrivers[1].points}`,
-            image: getDriverImage(
-                `${topThreeDrivers[1].driver.name} ${topThreeDrivers[1].driver.surname}`
-            ),
-        },
-        {
-            position: 1,
-            name: `${topThreeDrivers[0].driver.name} ${topThreeDrivers[0].driver.surname}`,
-            team: `${topThreeDrivers[0].team.teamName}`,
-            points: `${topThreeDrivers[0].points}`,
-            image: getDriverImage(
-                `${topThreeDrivers[0].driver.name} ${topThreeDrivers[0].driver.surname}`
-            ),
-        },
-        {
-            position: 3,
-            name: `${topThreeDrivers[2].driver.name} ${topThreeDrivers[2].driver.surname}`,
-            team: `${topThreeDrivers[2].team.teamName}`,
-            points: `${topThreeDrivers[2].points}`,
-            image: getDriverImage(
-                `${topThreeDrivers[2].driver.name} ${topThreeDrivers[2].driver.surname}`
-            ),
-        },
-    ];
+    const ORDERED_DRIVERS = [DRIVERS[1], DRIVERS[0], DRIVERS[2]];
 
     return (
         <section className="bg-black py-16 text-white">
@@ -43,7 +23,7 @@ function HomePodium({ currentChampions }) {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    {DRIVERS.map((driver) => (
+                    {ORDERED_DRIVERS.map((driver) => (
                         <div
                             key={driver.name}
                             className={`flex flex-col items-center bg-black rounded-xl border-2 border-slate-700 shadow-lg p-4 w-56 transition-transform hover:scale-105`}

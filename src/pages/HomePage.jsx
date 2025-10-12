@@ -22,7 +22,7 @@ function HomePage() {
             />
             <HomeLeader currentChampions={currentChampions} />
             <HomePodium currentChampions={currentChampions} />
-            <NextRace />
+            <NextRace raceData={raceData} />
             <HomeExploreSection />
         </div>
     );

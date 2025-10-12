@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 const CIRCUIT_IMAGE =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png";
 
-function NextRace() {
+function NextRace({ raceData }) {
+    console.log(raceData);
+
     return (
         <section className="bg-black py-12">
             <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
