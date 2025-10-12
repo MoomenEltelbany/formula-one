@@ -139,3 +139,13 @@ export async function fetchAllRaces() {
 
     return { races, completedRacesCount, nextRaceName, nextRaceData };
 }
+
+export async function fetchRaceById(id) {
+    const res = await fetch(`api/circuits/${id}`);
+
+    if (!res.ok) throw new Error("The race could not be fetched");
+
+    const data = await res.json();
+
+    return data.circuit[0];
+}

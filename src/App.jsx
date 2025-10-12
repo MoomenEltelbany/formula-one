@@ -14,6 +14,7 @@ import HomePage from "./pages/HomePage";
 import AppLayout from "./ui/AppLayout";
 
 import { loader as homeStatLoader } from "./ui/HomeStatCards";
+import { loader as raceDetailsLoader } from "./features/races/RaceDetailsPage";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
                 path: "races/:raceId",
                 element: <RaceDetailsPage />,
                 errorElement: <ErrorPage />,
+                loader: raceDetailsLoader,
             },
             {
                 path: "standings",

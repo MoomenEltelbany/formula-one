@@ -8,7 +8,6 @@ function NextRace({ raceData }) {
     const {
         nextRaceData: { raceId, circuit, raceName, schedule },
     } = raceData;
-    console.log(raceData);
 
     const daysLeftToRace = getRaceCountdown(schedule.race.date);
 
@@ -28,13 +27,12 @@ function NextRace({ raceData }) {
                 </p>
                 <div className="bg-black max-w-2xl rounded-lg border-2 border-red-500/50 shadow-md hover:scale-105 transition-transform duration-300">
                     <img
-                        // src={`${raceId}.png`}
-                        src={`/public/images/circuits/${raceId}.png`}
+                        src={`/images/circuits/${raceId}.png`}
                         alt={`${raceName} Circuit photo`}
                     />
                 </div>
                 <Link
-                    to={`/races/${circuit.circuitId}`}
+                    to={`/races/${circuit.circuitId}?raceId=${raceId}`}
                     className="mt-4 bg-red-600 text-white py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
                 >
                     View Race Details
