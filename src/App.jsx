@@ -24,42 +24,52 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <HomePage />,
                 loader: homeStatLoader,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "drivers",
                 element: <DriversPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "drivers/:driverId",
                 element: <DriverDetailsPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "teams",
                 element: <TeamsPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "teams/:teamId",
                 element: <TeamDetailsPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "races",
                 element: <RacesPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "races/:raceId",
                 element: <RaceDetailsPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "standings",
                 element: <StandingPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "about",
                 element: <AboutPage />,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "*",
                 element: <NotFoundPage />,
+                errorElement: <ErrorPage />,
             },
         ],
     },

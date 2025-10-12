@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import { formateDate, getRaceCountdown } from "../../utils/dateUtils";
 
 const CIRCUIT_IMAGE =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png";
 
 function NextRace({ raceData }) {
+    const {
+        nextRaceData: { raceId, circuit, raceName, schedule },
+    } = raceData;
     console.log(raceData);
+
+    const daysLeftToRace = getRaceCountdown(schedule.race.date);
 
     return (
         <section className="bg-black py-12">
@@ -13,23 +19,22 @@ function NextRace({ raceData }) {
                     🏆 Next race
                 </h2>
                 <p className="text-4xl font-semibold">
-                    🌍 Australian Grand Prix
+                    🌍 {circuit?.country}: {circuit?.city}
                 </p>
-                <p className="text-xl text-gray-300">
-                    📍 Albert Park Grand Prix Circuit
-                </p>
-                <p className="text-2xl">📅 December 26, 2025</p>
+                <p className="text-xl text-gray-300">📍 {raceName}</p>
+                <p className="text-2xl">📅 {formateDate(schedule.race.date)}</p>
                 <p className="text-2xl text-red-500 font-medium">
-                    ⏰ 15 days remaining
+                    ⏰ {daysLeftToRace} days left to the next race
                 </p>
-                <div
-                    className="bg-black max-w-2xl rounded-lg border-2 border-red-500/50 shadow-md hover:scale-105 transition-transform duration-300
-"
-                >
-                    <img src={CIRCUIT_IMAGE} alt="Circuit Australia Image" />
+                <div className="bg-black max-w-2xl rounded-lg border-2 border-red-500/50 shadow-md hover:scale-105 transition-transform duration-300">
+                    <img
+                        // src={`${raceId}.png`}
+                        src={`/public/images/circuits/${raceId}.png`}
+                        alt={`${raceName} Circuit photo`}
+                    />
                 </div>
                 <Link
-                    to="/races/:123"
+                    to={`/races/${circuit.circuitId}`}
                     className="mt-4 bg-red-600 text-white py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
                 >
                     View Race Details
