@@ -18,7 +18,7 @@ export function getRaceCountdown(raceDateString) {
     }
 }
 
-export function formateDate(date) {
+export function formatDate(date) {
     const newDate = new Date(date);
     const formattedDate = newDate.toLocaleDateString("en-US", {
         day: "numeric",
