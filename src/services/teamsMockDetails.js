@@ -1,5 +1,3 @@
-import ErrorPage from "../pages/ErrorPage";
-
 export const mockTeams = [
     {
         teamId: "1124",

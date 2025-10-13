@@ -1,4 +1,3 @@
-import { mockDrivers } from "../../services/driversMockDetails";
 import DriversListCard from "./DriversListCard";
 
 function DriversList({ drivers }) {

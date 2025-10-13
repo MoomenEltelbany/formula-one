@@ -427,13 +427,13 @@ const driversImages = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/KingsLeonSilverstne040724_%2828_of_112%29_%2853838006028%29_%28cropped%29.jpg/1280px-KingsLeonSilverstne040724_%2828_of_112%29_%2853838006028%29_%28cropped%29.jpg",
     "Charles Leclerc":
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg/1280px-2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg",
-    "Kimi Antonelli":
+    "Andrea Kimi Antonelli":
         "https://media.gettyimages.com/id/2220297608/photo/f1-grand-prix-of-canada.jpg?s=1024x1024&w=gi&k=20&c=YMKr9wMnjPmSWSNRL2Y5hcIUzA4UZGu38hR-ol7JC20=",
-    "Alexander Albon":
+    "Alex Albon":
         "https://media.gettyimages.com/id/2209253535/photo/f1-grand-prix-of-bahrain-practice.jpg?s=1024x1024&w=gi&k=20&c=3WAsvDHbE5DPP5MKK9frxxi_WVwwZi22aTb4tYpZt-U=",
     "Isack Hadjar":
         "https://media.gettyimages.com/id/2233019068/photo/f1-grand-prix-of-netherlands.jpg?s=1024x1024&w=gi&k=20&c=xOw7llCsbCy7dBzyOT5pMTYS5On183OrquTbmHTLJlw=",
-    "Nico Hülkenberg":
+    "Nico Hulkenberg":
         "https://media.gettyimages.com/id/2223818229/photo/f1-grand-prix-of-great-britain.jpg?s=1024x1024&w=gi&k=20&c=3-sUdtDk01WOPfc5CCW8VuUnIjHw1kjlYAtOVA6MgTQ=",
     "Lance Stroll":
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/2025_Japan_GP_-_Aston_Martin_-_Lance_Stroll_-_Fanzone_Stage_%28cropped%29.jpg/1280px-2025_Japan_GP_-_Aston_Martin_-_Lance_Stroll_-_Fanzone_Stage_%28cropped%29.jpg",
@@ -455,6 +455,8 @@ const driversImages = {
         "https://media.gettyimages.com/id/2160590389/photo/oliver-bearman-signs-haas-f1-contract.jpg?s=1024x1024&w=gi&k=20&c=wuuGNuCOhoSx0pBKNmcg2GpfglQ6bTGue2BH7-FXiuc=",
     "Franco Colapinto":
         "https://media.gettyimages.com/id/2206453956/photo/f1-grand-prix-of-china.jpg?s=1024x1024&w=gi&k=20&c=ua2it8Qtrgzf-_JpdI5owDYeBoPn-chOM8fl_x7zcjY=",
+    "Jack Doohan":
+        "https://media.gettyimages.com/id/2202024833/photo/formula-1-testing-in-bahrain-day-1.jpg?s=1024x1024&w=gi&k=20&c=Q3DgNMxCrvpmG4NXxDT8nAJ1-Yo2xHlZ6wd-DiKH9No=",
 };
 
 const constructorImages = {
@@ -523,3 +525,5 @@ export async function fetchDriverChampionshipStats() {
         topThreeDrivers,
     };
 }
+
+// export async function fetchDriverById(id) {}

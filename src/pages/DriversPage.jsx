@@ -3,22 +3,41 @@ import { useLoaderData } from "react-router-dom";
 import DriversHeader from "../features/drivers/DriversHeader";
 import DriversList from "../features/drivers/DriversList";
 import { fetchAllDrivers } from "../services/driversMockDetails";
+import { fetchAllTeams } from "../services/teamsMockDetails";
+import { useState } from "react";
 
 function DriversPage() {
-    const { drivers, total, season } = useLoaderData();
+    const [selectedDrivers, setSelectedDrivers] = useState("all");
+
+    const { allDrivers, allTeams } = useLoaderData();
+    const { drivers, total, season } = allDrivers;
+
+    const filteredDrivers = drivers.filter(
+        (driver) => driver.teamId === selectedDrivers
+    );
+
+    const shownDrivers = selectedDrivers === "all" ? drivers : filteredDrivers;
 
     return (
         <div>
-            <DriversHeader total={total} />
-            <DriversList drivers={drivers} />
+            <DriversHeader
+                total={total}
+                season={season}
+                allTeams={allTeams}
+                onSelectedDrivers={setSelectedDrivers}
+            />
+            <DriversList drivers={shownDrivers} />
         </div>
     );
 }
 
 export async function loader() {
-    const data = await fetchAllDrivers();
+    const [allDrivers, allTeams] = await Promise.all([
+        fetchAllDrivers(),
+        fetchAllTeams(),
+    ]);
 
-    return data;
+    return { allDrivers, allTeams };
 }
 
 export default DriversPage;
