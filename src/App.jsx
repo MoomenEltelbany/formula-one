@@ -5,7 +5,7 @@ import TeamDetailsPage from "./features/teams/TeamDetailsPage";
 import RaceDetailsPage from "./features/races/RaceDetailsPage";
 import StandingPage from "./pages/StandingPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import DriversPage from "./pages/DriversPage";
+import DriversPage, { loader } from "./pages/DriversPage";
 import TeamsPage from "./pages/TeamsPage";
 import RacesPage from "./pages/RacesPage";
 import AboutPage from "./pages/AboutPage";
@@ -15,6 +15,7 @@ import AppLayout from "./ui/AppLayout";
 
 import { loader as homeStatLoader } from "./ui/HomeStatCards";
 import { loader as raceDetailsLoader } from "./features/races/RaceDetailsPage";
+import { loader as driversPageLoader } from "./pages/DriversPage";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
                 path: "drivers",
                 element: <DriversPage />,
                 errorElement: <ErrorPage />,
+                loader: driversPageLoader,
             },
             {
                 path: "drivers/:driverId",

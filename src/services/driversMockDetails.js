@@ -500,10 +500,6 @@ export async function fetchAllDrivers() {
     return data;
 }
 
-// export async function fetchTopThreeDrivers() {
-//     const res = await fetch("api/");
-// }
-
 /*
     Fetches the top 5 drivers in the championship and returns:
         - championshipLeader: the driver currently leading in points
