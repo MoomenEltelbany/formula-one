@@ -26,7 +26,7 @@ function HomePodium({ currentChampions }) {
                     {ORDERED_DRIVERS.map((driver) => (
                         <div
                             key={driver.name}
-                            className={`flex flex-col items-center bg-black rounded-xl border-2 border-slate-700 shadow-lg p-4 w-56 transition-transform hover:scale-105`}
+                            className={`flex flex-col items-center bg-black rounded-xl border-2 border-slate-700 shadow-lg p-4 w-56 transition-all hover:scale-105 hover:shadow-red-600/20 duration-300`}
                             style={{
                                 height:
                                     driver.position === 1 ? "340px" : "300px",
