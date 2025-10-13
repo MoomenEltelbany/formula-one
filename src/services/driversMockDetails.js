@@ -491,7 +491,7 @@ export function getDriverTeamLogo(name) {
     Fetches all the drivers of the current year
  */
 export async function fetchAllDrivers() {
-    const res = await fetch("api/current/drivers");
+    const res = await fetch("/api/current/drivers");
 
     if (!res.ok) throw new Error("Failed to fetch the drivers");
 
@@ -510,7 +510,7 @@ export async function fetchAllDrivers() {
         - topWinner: the driver with the most wins
  */
 export async function fetchDriverChampionshipStats() {
-    const res = await fetch("api/current/drivers-championship?limit=5");
+    const res = await fetch("/api/current/drivers-championship?limit=5");
 
     if (!res.ok) throw new Error("Failed to fetch the current champion");
 

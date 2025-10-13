@@ -122,7 +122,7 @@ export const getDaysUntil = (raceDate) => {
 */
 
 export async function fetchAllRaces() {
-    const res = await fetch("api/2025");
+    const res = await fetch("/api/2025");
     if (!res.ok) throw new Error("Failed to fetch the races");
 
     const races = await res.json();
@@ -141,7 +141,7 @@ export async function fetchAllRaces() {
 }
 
 export async function fetchRaceById(id) {
-    const res = await fetch(`api/circuits/${id}`);
+    const res = await fetch(`/api/circuits/${id}`);
 
     if (!res.ok) throw new Error("The race could not be fetched");
 

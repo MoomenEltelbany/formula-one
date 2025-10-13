@@ -6,7 +6,7 @@ function LoadingSpinner({ size = "medium" }) {
     };
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
             <div
                 className={`${sizeClasses[size]} border-4 border-gray-700 border-t-red-600 rounded-full animate-spin`}
             ></div>

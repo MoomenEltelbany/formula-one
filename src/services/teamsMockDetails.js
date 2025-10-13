@@ -124,7 +124,7 @@ export const mockTeams = [
 ];
 
 export async function fetchAllTeams() {
-    const res = await fetch("api/current/teams");
+    const res = await fetch("/api/current/teams");
 
     if (!res.ok) throw new Error("Failed to fetch current teams");
 
@@ -134,7 +134,7 @@ export async function fetchAllTeams() {
 }
 
 export async function fetchTeamChampionshipStats() {
-    const res = await fetch("api/current/constructors-championship");
+    const res = await fetch("/api/current/constructors-championship");
 
     if (!res.ok) throw new Error("Failed to fetch the top team");
 
