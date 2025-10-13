@@ -508,7 +508,7 @@ export async function fetchAllDrivers() {
         - topWinner: the driver with the most wins
  */
 export async function fetchDriverChampionshipStats() {
-    const res = await fetch("/api/current/drivers-championship?limit=5");
+    const res = await fetch("/api/current/drivers-championship");
 
     if (!res.ok) throw new Error("Failed to fetch the current champion");
 
@@ -520,10 +520,19 @@ export async function fetchDriverChampionshipStats() {
         driver.wins > top.wins ? driver : top
     );
     return {
+        data,
         currentLeader: data["drivers_championship"][0],
         topWinner,
         topThreeDrivers,
     };
 }
 
-// export async function fetchDriverById(id) {}
+export async function fetchDriverById(id) {
+    const res = await fetch(`/api/current/drivers/${id}`);
+
+    if (!res.ok) throw new Error("Driver couldn't be fetched");
+
+    const data = res.json();
+
+    return data;
+}
