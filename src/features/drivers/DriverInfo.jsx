@@ -1,6 +1,6 @@
 function DriverInfo({ driver, team, seasonSummary }) {
     return (
-        <>
+        <div className="space-y-4">
             <p className="text-slate-300 text-lg">{seasonSummary}</p>
             <p className="text-slate-300 text-lg">
                 Driving for {team.teamName}, the team is from {team.country}{" "}
@@ -11,7 +11,7 @@ function DriverInfo({ driver, team, seasonSummary }) {
                 experience, and intensity to every race weekend — contributing
                 to the team's pursuit of excellence and championship glory.
             </p>
-        </>
+        </div>
     );
 }
 

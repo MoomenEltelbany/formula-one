@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formateDate, getRaceCountdown } from "../../utils/dateUtils";
+import { formatDate, getRaceCountdown } from "../../utils/dateUtils";
 
 const CIRCUIT_IMAGE =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png";
@@ -21,7 +21,7 @@ function NextRace({ raceData }) {
                     🌍 {circuit?.country}: {circuit?.city}
                 </p>
                 <p className="text-xl text-gray-300">📍 {raceName}</p>
-                <p className="text-2xl">📅 {formateDate(schedule.race.date)}</p>
+                <p className="text-2xl">📅 {formatDate(schedule.race.date)}</p>
                 <p className="text-2xl text-red-500 font-medium">
                     ⏰ {daysLeftToRace} days left to the next race
                 </p>

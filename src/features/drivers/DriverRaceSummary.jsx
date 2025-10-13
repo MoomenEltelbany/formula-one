@@ -1,13 +1,12 @@
-import { formateDate } from "../../utils/dateUtils";
+import { formatDate } from "../../utils/dateUtils";
 
 function DriverRaceSummary({ raceData }) {
-    console.log(raceData);
     const { race, result } = raceData;
     return (
         <div className="bg-black rounded-lg shadow-md p-4 border border-slate-700 hover:scale-[1.02] transition-transform">
-            <h3 className="text-lg font-bold text-red-500 mb-2">{race.name}</h3>
+            <h3 className="text-lg font-bold text-red-400 mb-2">{race.name}</h3>
             <p className="text-slate-300 text-sm">
-                <strong>Date:</strong> {formateDate(race.date)} <br />
+                <strong>Date:</strong> {formatDate(race.date)} <br />
                 <strong>Round:</strong> {race.round} <br />
                 <strong>Circuit:</strong> {race.circuit.name} (
                 {race.circuit.city}, {race.circuit.country}) <br />

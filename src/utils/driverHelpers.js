@@ -1,11 +1,14 @@
+const PODIUM_POSITION = 3;
+const MIDFIELD_POSITION = 10;
+
 export function getDriverSeasonSummary(driver, position, points, wins) {
     const fullName = `${driver.name} ${driver.surname}`;
 
-    if (position <= 3) {
+    if (position <= PODIUM_POSITION) {
         return `With ${points} points and ${wins} victories so far this season, ${fullName} is holding a commanding position in the standings — currently sitting in position n°${position}. His ability to consistently deliver high-level performances has kept him firmly in the spotlight, as he continues to challenge the front-runners and push the limits of what's possible on race day.`;
     }
 
-    if (position > 3 && position <= 10) {
+    if (position > PODIUM_POSITION && position <= MIDFIELD_POSITION) {
         return `With ${points} points and a string of competitive finishes, ${fullName} currently holds position n°${position} in the championship standings. His season has been marked by consistency and resilience, keeping him well within reach of the leaders and firmly in the mix for podium contention.`;
     }
 

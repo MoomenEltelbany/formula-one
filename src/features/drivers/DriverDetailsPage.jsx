@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useLoaderData } from "react-router-dom";
 
 import DriverHeader from "./DriverHeader";
@@ -11,24 +12,35 @@ import {
 } from "../../services/driversMockDetails";
 import { getDriverSeasonSummary } from "../../utils/driverHelpers";
 
-/* eslint-disable react-refresh/only-export-components */
 function DriverDetailsPage() {
+    // driverData: Will return the results about the driver's races with many useful information about the races that we will use to make the race card of each race for every driver
+    //driverChampionshipStats: This will return all the possible information about the driver, like his points, wins, team, etc
+
     const { driverData, driverChampionshipStats } = useLoaderData();
 
     const { results: raceResults } = driverData;
 
-    const wantedDriver = driverChampionshipStats.data[
+    // !Function used to retrieve the information of the driver based on the ID
+    const currentDriverStats = driverChampionshipStats.data[
         "drivers_championship"
-    ].filter((d) => driverData.driver.driverId === d.driverId);
+    ].find((d) => driverData.driver.driverId === d.driverId);
 
-    const { driver, position, team, wins, points } = wantedDriver[0];
+    const { driver, position, team, wins, points } = currentDriverStats;
 
+    // The helper function that we use to get the image of the driver
     const image = getDriverImage(`${driver.name} ${driver.surname}`);
-    const seasonSummary = getDriverSeasonSummary(driver, position, points, wins);
+
+    // A helper function so that we can customize the summary of each driver depending on his position in the Championship standings
+    const seasonSummary = getDriverSeasonSummary(
+        driver,
+        position,
+        points,
+        wins
+    );
 
     return (
-        <section className="bg-black py-12">
-            <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+        <div className="bg-black py-12">
+            <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
                 <DriverHeader driver={driver} image={image} />
                 <DriverInfo
                     driver={driver}
@@ -36,8 +48,8 @@ function DriverDetailsPage() {
                     seasonSummary={seasonSummary}
                 />
                 <DriverRaceResults raceResults={raceResults} />
-            </main>
-        </section>
+            </section>
+        </div>
     );
 }
 
