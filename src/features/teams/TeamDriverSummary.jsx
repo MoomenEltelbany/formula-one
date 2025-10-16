@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { formatDate } from "../../utils/dateUtils";
 
 function TeamDriverSummary({ driver }) {
     const { driver: selectedDriver } = driver;
