@@ -7,12 +7,10 @@ import { fetchTeamChampionshipStats } from "../services/teamsMockDetails";
 function TeamsPage() {
     const { constructors_championship: constructorsTeams } = useLoaderData();
 
-    // console.log(constructorsTeams);
-
     return (
         <div>
             <TeamsHeader total={constructorsTeams.length} />
-            <TeamsList />
+            <TeamsList constructorsTeams={constructorsTeams} />
         </div>
     );
 }
