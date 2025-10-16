@@ -28,9 +28,11 @@ function HomeStatCards({
     drivers,
     currentChampions,
     teams,
-    currentTopTeam,
+    currentTeams,
     raceData,
 }) {
+    const currentTopTeam = currentTeams["constructors_championship"][0];
+
     const { currentLeader, topWinner } = currentChampions;
 
     const { points: teamPoints, team: teamData } = currentTopTeam;
@@ -90,7 +92,7 @@ function HomeStatCards({
 }
 
 export async function loader() {
-    const [drivers, currentChampions, teams, currentTopTeam, raceData] =
+    const [drivers, currentChampions, teams, currentTeams, raceData] =
         await Promise.all([
             fetchAllDrivers(),
             fetchDriverChampionshipStats(),
@@ -103,7 +105,7 @@ export async function loader() {
         drivers,
         currentChampions,
         teams,
-        currentTopTeam,
+        currentTeams,
         raceData,
     };
 }

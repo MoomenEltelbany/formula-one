@@ -7,7 +7,7 @@ import NextRace from "../features/races/NextRace";
 import { useLoaderData } from "react-router-dom";
 
 function HomePage() {
-    const { drivers, currentChampions, teams, currentTopTeam, raceData } =
+    const { drivers, currentChampions, teams, currentTeams, raceData } =
         useLoaderData();
 
     return (
@@ -17,7 +17,7 @@ function HomePage() {
                 drivers={drivers}
                 currentChampions={currentChampions}
                 teams={teams}
-                currentTopTeam={currentTopTeam}
+                currentTeams={currentTeams}
                 raceData={raceData}
             />
             <HomeLeader currentChampions={currentChampions} />

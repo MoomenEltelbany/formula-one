@@ -138,5 +138,6 @@ export async function fetchTeamChampionshipStats() {
 
     const data = await res.json();
 
-    return data["constructors_championship"][0];
+    // return data["constructors_championship"][0];
+    return data;
 }
