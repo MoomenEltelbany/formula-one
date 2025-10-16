@@ -8,13 +8,12 @@ import TeamDriverSummary from "./TeamDriverSummary";
 function TeamDetailsPage() {
     const data = useLoaderData();
 
-    const { drivers, team, season, total } = data;
+    const { drivers, team, season } = data;
 
     const {
         teamName,
         constructorsChampionships,
         driversChampionships,
-        firstAppeareance,
         points,
         position,
         teamNationality,
