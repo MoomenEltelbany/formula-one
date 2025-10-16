@@ -1,25 +1,74 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react-refresh/only-export-components */
+import { Link, useLoaderData } from "react-router-dom";
+import { fetchTeamsDrivers } from "../../services/teamsMockDetails";
+import TeamOverview from "./TeamOverview";
+import TeamSummary from "./TeamSummary";
+import TeamDriverSummary from "./TeamDriverSummary";
 
 function TeamDetailsPage() {
+    const data = useLoaderData();
+
+    const { drivers, team, season, total } = data;
+
+    const {
+        teamName,
+        constructorsChampionships,
+        driversChampionships,
+        firstAppeareance,
+        points,
+        position,
+        teamNationality,
+        wins,
+        url,
+    } = team;
+
+    // console.log(data);
+
     return (
-        <div className="h-full">
-            <div className="flex flex-col justify-center items-center gap-2 pt-4">
-                <h3 className="text-slate-400 font-semibold">Teams' drivers</h3>
-                <Link
-                    to="/drivers/driverId"
-                    className="bg-red-600 text-slate-300 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:text-red-500 hover:bg-slate-100"
-                >
-                    Hoba lala
-                </Link>
-                <Link
-                    to="/drivers/driverId"
-                    className="bg-red-600 text-slate-300 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:text-red-500 hover:bg-slate-300"
-                >
-                    Ya Abdallah
-                </Link>
-            </div>
+        <div className="bg-black py-12">
+            <TeamOverview
+                teamName={teamName}
+                constructorsChampionships={constructorsChampionships}
+                driversChampionships={driversChampionships}
+                points={points}
+                position={position}
+                teamNationality={teamNationality}
+                season={season}
+                wins={wins}
+            />
+
+            <TeamSummary
+                driversChampionships={driversChampionships}
+                constructorsChampionships={constructorsChampionships}
+                teamName={teamName}
+                teamNationality={teamNationality}
+                points={points}
+                position={position}
+                url={url}
+            />
+
+            <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+                <h2 className="font-semibold text-2xl text-red-600 uppercase">
+                    Teams' drivers
+                </h2>
+                <div className="flex flex-wrap md:flex-nowrap gap-8 text-left">
+                    {drivers.map((driver) => (
+                        <TeamDriverSummary
+                            driver={driver}
+                            teamName={teamName}
+                            key={driver.driveId}
+                        />
+                    ))}
+                </div>
+            </section>
         </div>
     );
 }
 
 export default TeamDetailsPage;
+
+export async function loader({ params }) {
+    const data = await fetchTeamsDrivers(params.teamId);
+
+    return data;
+}

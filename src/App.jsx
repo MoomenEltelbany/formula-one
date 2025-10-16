@@ -16,6 +16,7 @@ import AppLayout from "./ui/AppLayout";
 import { loader as homeStatLoader } from "./ui/HomeStatCards";
 import { loader as raceDetailsLoader } from "./features/races/RaceDetailsPage";
 import { loader as driverDetailsLoader } from "./features/drivers/DriverDetailsPage";
+import { loader as teamDetailsLoader } from "./features/teams/TeamDetailsPage";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
             {
                 path: "teams/:teamId",
                 element: <TeamDetailsPage />,
+                loader: teamDetailsLoader,
                 errorElement: <ErrorPage />,
             },
             {
