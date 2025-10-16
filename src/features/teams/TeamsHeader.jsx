@@ -1,6 +1,6 @@
 import TeamsFilter from "./TeamsFilter";
 
-function TeamsHeader({ total }) {
+function TeamsHeader({ total, onSelectedTeam }) {
     const currentYear = new Date().getFullYear();
     return (
         <section className="bg-black py-16 text-white">
@@ -18,7 +18,7 @@ function TeamsHeader({ total }) {
                 <p className="text-center text-red-500 text-xl font-semibold my-5">
                     Active Teams: {total}
                 </p>
-                <TeamsFilter />
+                <TeamsFilter onSelectedTeam={onSelectedTeam} />
             </main>
         </section>
     );
