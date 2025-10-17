@@ -48,12 +48,6 @@ function DriversListCard({ driver }) {
                     {formatTeamName(teamId)}
                 </p>
 
-                {/* <div className="flex justify-center gap-4 mt-4 text-sm">
-                    <span>🏁 {drivers.points} pts</span>
-                    <span>•</span>
-                    <span>Pos {drivers.position}</span>
-                </div> */}
-
                 <Link
                     to={`/drivers/${driverId}`}
                     className="mt-5 inline-block py-2 px-5 rounded-lg bg-red-600 text-slate-200 hover:bg-white hover:text-red-600 font-semibold transition-colors duration-300"

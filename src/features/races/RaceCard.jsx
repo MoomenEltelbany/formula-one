@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../../utils/dateUtils";
 
 function RaceCard({ race }) {
-    console.log(race);
     const { circuit, raceName, round, schedule, teamWinner, winner, raceId } =
         race;
 
@@ -60,7 +59,10 @@ function RaceCard({ race }) {
 
             {/* I made two buttons and not two texts because later depending on the text, we will navigate the user either to the results or the circuit information - We will use Link component later */}
             {race.winner ? (
-                <Link className="mt-auto bg-red-600 text-white font-semibold py-2 px-auto rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
+                <Link
+                    to={`/race/${round}`}
+                    className="mt-auto bg-red-600 text-white font-semibold py-2 px-auto rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer"
+                >
                     View Results
                 </Link>
             ) : (

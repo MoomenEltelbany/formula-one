@@ -8,6 +8,9 @@ import NotFoundPage from "./pages/NotFoundPage";
 import DriversPage, { loader as driversPageLoader } from "./pages/DriversPage";
 import TeamsPage, { loader as teamPageLoader } from "./pages/TeamsPage";
 import RacesPage, { loader as racePageLoader } from "./pages/RacesPage";
+import RaceResultsPage, {
+    loader as raceResultsLoader,
+} from "./features/races/RaceResultsPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
@@ -17,7 +20,6 @@ import { loader as homeStatLoader } from "./ui/HomeStatCards";
 import { loader as raceDetailsLoader } from "./features/races/RaceDetailsPage";
 import { loader as driverDetailsLoader } from "./features/drivers/DriverDetailsPage";
 import { loader as teamDetailsLoader } from "./features/teams/TeamDetailsPage";
-
 const router = createBrowserRouter([
     {
         element: <AppLayout />,
@@ -62,8 +64,14 @@ const router = createBrowserRouter([
             {
                 path: "races/:raceId",
                 element: <RaceDetailsPage />,
-                errorElement: <ErrorPage />,
                 loader: raceDetailsLoader,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "race/:completedRaceId",
+                element: <RaceResultsPage />,
+                loader: raceResultsLoader,
+                errorElement: <ErrorPage />,
             },
             {
                 path: "standings",

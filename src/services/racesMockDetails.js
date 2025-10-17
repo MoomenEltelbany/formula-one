@@ -149,3 +149,13 @@ export async function fetchRaceById(id) {
 
     return data.circuit[0];
 }
+
+export async function fetchCompletedRace(id) {
+    const res = await fetch(`/api/${new Date().getFullYear()}/${id}/race`);
+
+    if (!res.ok) throw new Error("The race couldn't be fetched");
+
+    const data = await res.json();
+
+    return data;
+}
