@@ -1,13 +1,23 @@
+import { Link } from "react-router-dom";
+import { formatDate } from "../../utils/dateUtils";
+
 function RaceCard({ race }) {
+    console.log(race);
+    const { circuit, raceName, round, schedule, teamWinner, winner, raceId } =
+        race;
+
+    let status = "Completed";
+
+    if (!winner) status = "Upcoming";
+
     function getStatusColor() {
-        if (race.status === "completed") return "#10b981";
-        if (race.status === "next") return "#f59e0b";
+        if (status === "Completed") return "#10b981";
         return "#ef4444";
     }
 
     return (
         <div
-            className="bg-neutral-900 text-center space-y-3 py-5 px-6 rounded-3xl shadow-md hover:shadow-red-600/30 transition-all duration-300 border border-neutral-800"
+            className="bg-neutral-900 text-center space-y-3 py-5 px-6 rounded-3xl shadow-md hover:shadow-red-600/30 transition-all duration-300 border border-neutral-800 flex flex-col"
             style={{ boxShadow: `0 4px 6px -1px ${getStatusColor()}4D` }}
         >
             <div
@@ -15,39 +25,51 @@ function RaceCard({ race }) {
                 style={{ backgroundColor: getStatusColor() }}
             ></div>
             <h3 className="text-xl font-semibold text-white tracking-wide">
-                Race {race.round}
+                Race {round}
             </h3>
-            <p className="text-lg text-red-500 font-medium">{race.raceName}</p>
             <p className="text-slate-300">
-                {race.flag} {race.country}
+                {circuit.city}, {circuit.country}
             </p>
-            <p className="text-slate-400 text-sm">📍 {race.circuitName}</p>
+            <p className="text-lg text-red-500 font-medium">📍 {raceName}</p>
             <p className="text-slate-400 text-sm">
-                📅{" "}
-                {new Date(race.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                })}
+                📅
+                {formatDate(schedule.race.date)}
             </p>
-            <p className="font-medium" style={{ color: getStatusColor() }}>
-                Status:{" "}
-                {race.status.charAt(0).toUpperCase() + race.status.slice(1)}
+            <p className="font-medium">
+                <p className="font-medium" style={{ color: getStatusColor() }}>
+                    Status: {status}
+                </p>
             </p>
             <p className="text-slate-300">
-                🏆 Winner:{" "}
-                <strong>{race.winner || "We will wait to know"}</strong>
+                {winner && (
+                    <>
+                        🏆 Winner:{" "}
+                        <strong>
+                            {winner.name} {winner.surname}
+                        </strong>
+                    </>
+                )}
+            </p>
+            <p className="text-slate-300">
+                {winner && (
+                    <>
+                        🏎️ Team: <strong>{teamWinner.teamName}</strong>
+                    </>
+                )}
             </p>
 
             {/* I made two buttons and not two texts because later depending on the text, we will navigate the user either to the results or the circuit information - We will use Link component later */}
             {race.winner ? (
-                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
+                <Link className="mt-auto bg-red-600 text-white font-semibold py-2 px-auto rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
                     View Results
-                </button>
+                </Link>
             ) : (
-                <button className="mt-3 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
+                <Link
+                    to={`/races/${circuit.circuitId}?raceId=${raceId}`}
+                    className="mt-auto bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer"
+                >
                     View Circuit
-                </button>
+                </Link>
             )}
         </div>
     );

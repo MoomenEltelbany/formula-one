@@ -7,7 +7,7 @@ import StandingPage from "./pages/StandingPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DriversPage, { loader as driversPageLoader } from "./pages/DriversPage";
 import TeamsPage, { loader as teamPageLoader } from "./pages/TeamsPage";
-import RacesPage from "./pages/RacesPage";
+import RacesPage, { loader as racePageLoader } from "./pages/RacesPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
@@ -56,6 +56,7 @@ const router = createBrowserRouter([
             {
                 path: "races",
                 element: <RacesPage />,
+                loader: racePageLoader,
                 errorElement: <ErrorPage />,
             },
             {

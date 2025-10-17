@@ -10,6 +10,8 @@ function HomePage() {
     const { drivers, currentChampions, teams, currentTeams, raceData } =
         useLoaderData();
 
+    console.log(raceData.nextRaceData);
+
     return (
         <div className="bg-black">
             <Hero />
@@ -22,7 +24,7 @@ function HomePage() {
             />
             <HomeLeader currentChampions={currentChampions} />
             <HomePodium currentChampions={currentChampions} />
-            <NextRace raceData={raceData} />
+            <NextRace raceData={raceData.nextRaceData} />
             <HomeExploreSection />
         </div>
     );

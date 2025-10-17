@@ -27,7 +27,8 @@ function RaceDetailsPage() {
 
     // Function to Capitalize the first letter of the driver's name and the constructor one as well
     function capitalize(name) {
-        return name.charAt(0).toUpperCase() + name.slice(1);
+        const newName = name.replaceAll("_", " ");
+        return newName.charAt(0).toUpperCase() + newName.slice(1);
     }
 
     return (

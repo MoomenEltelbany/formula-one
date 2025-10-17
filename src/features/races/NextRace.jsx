@@ -5,9 +5,7 @@ const CIRCUIT_IMAGE =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png";
 
 function NextRace({ raceData }) {
-    const {
-        nextRaceData: { raceId, circuit, raceName, schedule },
-    } = raceData;
+    const { circuit, schedule, raceName, raceId } = raceData;
 
     const daysLeftToRace = getRaceCountdown(schedule.race.date);
 
@@ -33,7 +31,7 @@ function NextRace({ raceData }) {
                 </div>
                 <Link
                     to={`/races/${circuit.circuitId}?raceId=${raceId}`}
-                    className="mt-4 bg-red-600 text-white py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
+                    className="mt-auto bg-red-600 text-white py-1.5 px-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-500 transition-colors duration-300"
                 >
                     View Race Details
                 </Link>
