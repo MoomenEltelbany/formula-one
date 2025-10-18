@@ -8,7 +8,6 @@ export default defineConfig({
             "/api": {
                 target: "https://f1connectapi.vercel.app",
                 changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, "/api"),
             },
         },
     },
