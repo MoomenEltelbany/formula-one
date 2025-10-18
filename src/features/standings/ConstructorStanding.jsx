@@ -1,3 +1,4 @@
+import Main from "../../ui/Main";
 import ConstructorTableCell from "./ConstructorTableCell";
 
 function ConstructorStanding({ allTeams }) {
@@ -7,7 +8,7 @@ function ConstructorStanding({ allTeams }) {
 
     return (
         <section className="bg-black py-12">
-            <div className="overflow-x-auto bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
+            <Main>
                 <h2 className="text-3xl font-title mb-10 tracking-wide text-red-500 font-bold uppercase">
                     🏆 Constructor Standing
                 </h2>
@@ -38,7 +39,7 @@ function ConstructorStanding({ allTeams }) {
                         ))}
                     </tbody>
                 </table>
-            </div>
+            </Main>
         </section>
     );
 }

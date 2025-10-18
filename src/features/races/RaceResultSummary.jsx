@@ -1,8 +1,9 @@
+import Main from "../../ui/Main";
 import CompletedRaceDrivers from "./CompletedRaceDrivers";
 
 function RaceResultSummary({ results }) {
     return (
-        <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
+        <Main>
             <h3 className="text-2xl text-red-500">
                 Driver Breakdown: Who Delivered, Who Struggled
             </h3>
@@ -20,7 +21,7 @@ function RaceResultSummary({ results }) {
                     />
                 ))}
             </div>
-        </main>
+        </Main>
     );
 }
 

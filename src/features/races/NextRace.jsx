@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatDate, getRaceCountdown } from "../../utils/dateUtils";
+import Main from "../../ui/Main";
 
 const CIRCUIT_IMAGE =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_F1_CourseLayout_Australia.svg/1920px-2022_F1_CourseLayout_Australia.svg.png";
@@ -11,7 +12,7 @@ function NextRace({ raceData }) {
 
     return (
         <section className="bg-black py-12">
-            <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
+            <Main>
                 <h2 className="text-4xl mb-6 text-red-500 font-bold text-center tracking-wide uppercase">
                     🏆 Next race
                 </h2>
@@ -37,7 +38,7 @@ function NextRace({ raceData }) {
                 >
                     View Race Details
                 </Link>
-            </main>
+            </Main>
         </section>
     );
 }

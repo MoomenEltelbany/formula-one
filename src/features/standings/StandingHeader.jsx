@@ -1,9 +1,11 @@
+import Main from "../../ui/Main";
+
 function StandingHeader({ allRaces }) {
     const { completedRacesCount, races } = allRaces;
 
     return (
         <section className="bg-black py-16 text-white">
-            <main className=" bg-neutral-900 m-4 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto px-4 text-center">
+            <Main>
                 <h2 className="text-3xl font-title mb-10 tracking-wide text-red-500 font-bold">
                     🏆 F1 CHAMPIONSHIP STANDINGS - {new Date().getFullYear()}
                 </h2>
@@ -13,7 +15,7 @@ function StandingHeader({ allRaces }) {
                 <p className="text-center text-red-500 text-xl font-semibold my-5">
                     Updated: After Round {completedRacesCount} of {races.total}
                 </p>
-            </main>
+            </Main>
         </section>
     );
 }

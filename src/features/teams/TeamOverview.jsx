@@ -1,3 +1,5 @@
+import Main from "../../ui/Main";
+
 function TeamOverview({
     teamName,
     teamNationality,
@@ -9,7 +11,7 @@ function TeamOverview({
     wins,
 }) {
     return (
-        <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+        <Main>
             <h2 className="font-semibold text-3xl text-red-600 uppercase tracking-wide">
                 Welcome to {teamName}
             </h2>
@@ -51,7 +53,7 @@ function TeamOverview({
                 </span>{" "}
                 {wins || 0}
             </p>
-        </section>
+        </Main>
     );
 }
 

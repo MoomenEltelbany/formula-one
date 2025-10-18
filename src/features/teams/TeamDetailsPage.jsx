@@ -4,6 +4,7 @@ import { fetchTeamsDrivers } from "../../services/teamsMockDetails";
 import TeamOverview from "./TeamOverview";
 import TeamSummary from "./TeamSummary";
 import TeamDriverSummary from "./TeamDriverSummary";
+import Main from "../../ui/Main";
 
 function TeamDetailsPage() {
     const data = useLoaderData();
@@ -44,7 +45,7 @@ function TeamDetailsPage() {
                 url={url}
             />
 
-            <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+            <Main>
                 <h2 className="font-semibold text-2xl text-red-600 uppercase">
                     Teams' drivers
                 </h2>
@@ -57,7 +58,7 @@ function TeamDetailsPage() {
                         />
                     ))}
                 </div>
-            </section>
+            </Main>
         </div>
     );
 }

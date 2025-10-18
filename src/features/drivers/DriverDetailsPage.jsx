@@ -11,6 +11,7 @@ import {
     getDriverImage,
 } from "../../services/driversMockDetails";
 import { getDriverSeasonSummary } from "../../utils/driverHelpers";
+import Main from "../../ui/Main";
 
 function DriverDetailsPage() {
     // driverData: Will return the results about the driver's races with many useful information about the races that we will use to make the race card of each race for every driver
@@ -40,7 +41,7 @@ function DriverDetailsPage() {
 
     return (
         <div className="bg-black py-12">
-            <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+            <Main>
                 <DriverHeader driver={driver} image={image} />
                 <DriverInfo
                     driver={driver}
@@ -48,7 +49,7 @@ function DriverDetailsPage() {
                     seasonSummary={seasonSummary}
                 />
                 <DriverRaceResults raceResults={raceResults} />
-            </section>
+            </Main>
         </div>
     );
 }

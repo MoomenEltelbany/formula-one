@@ -1,9 +1,10 @@
+import Main from "../../ui/Main";
 import { formatDate } from "../../utils/dateUtils";
 
 function RaceResultHeader({ races }) {
     const { circuit, raceName, round, date, raceId } = races;
     return (
-        <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
+        <Main>
             <h2 className="text-4xl mb-6 text-red-500 font-bold text-center tracking-wide uppercase">
                 🏁 Lights Out and Results In!
             </h2>
@@ -29,7 +30,7 @@ function RaceResultHeader({ races }) {
                     loading="lazy"
                 />
             </div>
-        </main>
+        </Main>
     );
 }
 

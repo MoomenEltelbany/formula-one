@@ -1,3 +1,5 @@
+import Main from "../../ui/Main";
+
 function TeamSummary({
     constructorsChampionships,
     teamName,
@@ -9,7 +11,7 @@ function TeamSummary({
 }) {
     const hasTitles = constructorsChampionships > 0;
     return (
-        <section className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+        <Main>
             <h2 className="font-semibold text-2xl text-red-600 uppercase">
                 🏎️ Team Overview
             </h2>
@@ -95,7 +97,7 @@ function TeamSummary({
             >
                 Check more about the team
             </a>
-        </section>
+        </Main>
     );
 }
 

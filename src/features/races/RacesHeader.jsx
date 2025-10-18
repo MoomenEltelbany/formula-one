@@ -1,9 +1,11 @@
+import Main from "../../ui/Main";
+
 function RacesHeader({ races, completedRacesCount }) {
     const currentYear = new Date().getFullYear();
 
     return (
         <section className="bg-black py-16 text-white">
-            <main className=" bg-neutral-900 m-4 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto px-4 text-center">
+            <Main>
                 <h2 className="text-3xl font-title mb-10 tracking-wide text-red-500 font-bold">
                     🏁 F1 RACE CALENDAR - {currentYear} SEASON
                 </h2>
@@ -22,7 +24,7 @@ function RacesHeader({ races, completedRacesCount }) {
                         Remaining: {races.total - completedRacesCount}
                     </p>
                 </div>
-            </main>
+            </Main>
         </section>
     );
 }

@@ -1,8 +1,9 @@
+import Main from "../../ui/Main";
 import RaceCard from "./RaceCard";
 
 function RacesSection({ races }) {
     return (
-        <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
+        <Main>
             <h2 className="text-3xl font-title mb-10 tracking-wide text-red-500 font-bold uppercase">
                 Check our Races
             </h2>
@@ -15,7 +16,7 @@ function RacesSection({ races }) {
                     ))}
                 </section>
             )}
-        </main>
+        </Main>
     );
 }
 

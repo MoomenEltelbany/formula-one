@@ -1,5 +1,6 @@
 import { useLoaderData, useSearchParams } from "react-router-dom";
 import { fetchRaceById } from "../../services/racesMockDetails";
+import Main from "../../ui/Main";
 
 /* eslint-disable react-refresh/only-export-components */
 function RaceDetailsPage() {
@@ -33,7 +34,7 @@ function RaceDetailsPage() {
 
     return (
         <section className="bg-black py-12">
-            <main className="bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider text-center">
+            <Main>
                 <h2 className="text-4xl mb-6 text-red-500 font-extrabold text-center tracking-widest uppercase drop-shadow-md">
                     🏁 Spotlight: {circuitName} ({city}, {country})
                 </h2>
@@ -103,7 +104,7 @@ function RaceDetailsPage() {
                 >
                     Learn More
                 </a>
-            </main>
+            </Main>
         </section>
     );
 }
