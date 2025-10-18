@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react";
 import { fetchTeamsDrivers } from "../../services/teamsMockDetails";
+import {
+    getPodiumEmoji,
+    getPositionColor,
+} from "../../services/standingsMockData";
 
 function ConstructorTableCell({ constructor }) {
     const [drivers, setDrivers] = useState([]);
 
     const { points, position, team, wins, teamId } = constructor;
-    // console.log(constructor);
-
-    let emoji = "";
-
-    if (position === 1) {
-        emoji = "🥇";
-    } else if (position === 2) {
-        emoji = "🥈";
-    } else if (position === 3) {
-        emoji = "🥉";
-    }
 
     useEffect(
         function () {
@@ -31,6 +24,7 @@ function ConstructorTableCell({ constructor }) {
                     console.log(data.drivers);
                     setDrivers(data.drivers);
                 } catch (error) {
+                    console.log(error.message);
                     throw new Error("Drivers couldn't be fetched");
                 }
             }
@@ -44,10 +38,12 @@ function ConstructorTableCell({ constructor }) {
         [teamId]
     );
 
+    const positionStyling = getPositionColor(position);
+
     return (
-        <tr>
+        <tr className={positionStyling}>
             <td className="py-2">
-                {emoji} {position}
+                {getPodiumEmoji(position)} {position}
             </td>
             <td className="py-2">{team.teamName}</td>
             <td className="hidden md:table-cell">{team.country}</td>

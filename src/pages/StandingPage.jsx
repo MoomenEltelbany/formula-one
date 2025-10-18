@@ -10,8 +10,6 @@ import { fetchTeamChampionshipStats } from "../services/teamsMockDetails";
 function StandingPage() {
     const { allRaces, allTeams, allDrivers } = useLoaderData();
 
-    // console.log(allTeams);
-
     return (
         <>
             <StandingHeader allRaces={allRaces} />

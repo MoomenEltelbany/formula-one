@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom";
+import {
+    getPodiumEmoji,
+    getPositionColor,
+} from "../../services/standingsMockData";
 
 function DriverTableCell({ driverData }) {
     const { driver, driverId, points, position, team, wins } = driverData;
 
-    let emoji = "";
-
-    if (position === 1) {
-        emoji = "🥇";
-    } else if (position === 2) {
-        emoji = "🥈";
-    } else if (position === 3) {
-        emoji = "🥉";
-    }
+    const positionStyling = getPositionColor(position);
 
     return (
-        <tr>
+        <tr className={positionStyling}>
             <td className="py-2">
-                {emoji} {position}
+                {getPodiumEmoji(position)} {position}
             </td>
             <td>
                 {driver.name} {driver.surname}

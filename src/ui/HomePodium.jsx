@@ -13,8 +13,6 @@ function HomePodium({ currentChampions }) {
         ),
     }));
 
-    const ORDERED_DRIVERS = [DRIVERS[1], DRIVERS[0], DRIVERS[2]];
-
     return (
         <section className="bg-black py-16 text-white">
             <main className=" bg-neutral-900 m-4 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto px-4 text-center">
@@ -23,16 +21,10 @@ function HomePodium({ currentChampions }) {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    {ORDERED_DRIVERS.map((driver) => (
+                    {DRIVERS.map((driver) => (
                         <div
                             key={driver.name}
                             className={`flex flex-col items-center bg-black rounded-xl border-2 border-slate-700 shadow-lg p-4 w-56 transition-all hover:scale-105 hover:shadow-red-600/20 duration-300`}
-                            style={{
-                                height:
-                                    driver.position === 1 ? "340px" : "300px",
-                                marginTop:
-                                    driver.position === 1 ? "-20px" : "0px",
-                            }}
                         >
                             <div className="w-28 h-28 overflow-hidden rounded-full border-2 border-gray-700 mb-4">
                                 <img
