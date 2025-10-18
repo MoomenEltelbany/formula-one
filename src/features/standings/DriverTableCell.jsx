@@ -1,6 +1,8 @@
-function DriverTableCell({ driver }) {
-    const { position, givenName, familyName, team, points, wins, podiums } =
-        driver;
+import { Link } from "react-router-dom";
+
+function DriverTableCell({ driverData }) {
+    console.log(driverData);
+    const { driver, driverId, points, position, team, wins } = driverData;
 
     let emoji = "";
 
@@ -18,14 +20,16 @@ function DriverTableCell({ driver }) {
                 {emoji} {position}
             </td>
             <td>
-                {givenName} {familyName}
+                {driver.name} {driver.surname}
             </td>
-            <td>{team}</td>
+            <td className="hidden md:table-cell">{driver.nationality}</td>
+            <td>{team.teamName}</td>
             <td>{points}</td>
             <td className="hidden md:table-cell">{wins}</td>
-            <td className="hidden md:table-cell">{podiums}</td>
             <td className="bg-red-600 text-white hover:text-red-600 hover:bg-white transition-colors duration-300 hidden md:table-cell">
-                <button className="cursor-pointer">Show Driver</button>
+                <Link to={`/drivers/${driverId}`} className="cursor-pointer">
+                    Show Driver
+                </Link>
             </td>
         </tr>
     );
