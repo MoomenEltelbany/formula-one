@@ -15,12 +15,14 @@ function NextRace({ raceData }) {
                 <h2 className="text-4xl mb-6 text-red-500 font-bold text-center tracking-wide uppercase">
                     🏆 Next race
                 </h2>
-                <p className="text-4xl font-semibold">
+                <p className="text-4xl font-semibold text-center">
                     🌍 {circuit?.country}: {circuit?.city}
                 </p>
-                <p className="text-xl text-gray-300">📍 {raceName}</p>
+                <p className="text-xl text-gray-300 text-center">
+                    📍 {raceName}
+                </p>
                 <p className="text-2xl">📅 {formatDate(schedule.race.date)}</p>
-                <p className="text-2xl text-red-500 font-medium">
+                <p className="text-2xl text-red-500 text-center font-medium">
                     ⏰ {daysLeftToRace} days left to the next race
                 </p>
                 <div className="bg-black max-w-2xl rounded-lg border-2 border-red-500/50 shadow-md hover:scale-105 transition-transform duration-300">
