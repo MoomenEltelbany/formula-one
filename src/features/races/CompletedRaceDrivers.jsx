@@ -1,8 +1,6 @@
 import { getDriverImage } from "../../services/driversMockDetails";
 
 function CompletedRaceDrivers({ driverData }) {
-    console.log(driverData);
-
     const { driver, grid, points, position, team, time } = driverData;
 
     const image = getDriverImage(`${driver.name} ${driver.surname}`);
