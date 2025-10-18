@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DriverDetailsPage from "./features/drivers/DriverDetailsPage";
 import TeamDetailsPage from "./features/teams/TeamDetailsPage";
 import RaceDetailsPage from "./features/races/RaceDetailsPage";
-import StandingPage from "./pages/StandingPage";
+import StandingPage, {
+    loader as standingPageLoader,
+} from "./pages/StandingPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DriversPage, { loader as driversPageLoader } from "./pages/DriversPage";
 import TeamsPage, { loader as teamPageLoader } from "./pages/TeamsPage";
@@ -76,6 +78,7 @@ const router = createBrowserRouter([
             {
                 path: "standings",
                 element: <StandingPage />,
+                loader: standingPageLoader,
                 errorElement: <ErrorPage />,
             },
             {

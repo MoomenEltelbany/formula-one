@@ -21,8 +21,6 @@ function TeamDetailsPage() {
         url,
     } = team;
 
-    // console.log(data);
-
     return (
         <div className="bg-black py-12">
             <TeamOverview

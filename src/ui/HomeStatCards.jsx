@@ -36,9 +36,8 @@ function HomeStatCards({
     const { currentLeader, topWinner } = currentChampions;
 
     const { points: teamPoints, team: teamData } = currentTopTeam;
-    // console.log(raceData);
 
-    const { races, completedRacesCount, nextRaceName, raceId } = raceData;
+    const { races, completedRacesCount, nextRaceName } = raceData;
 
     const STATS = [
         {
