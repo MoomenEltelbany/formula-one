@@ -38,7 +38,7 @@ function TeamListCard({ constructor }) {
                 {/* The constructorId will be teamId we will get from an API but I am putting this as a placeholder for now */}
                 <Link
                     to={`/teams/${teamId}`}
-                    className="inline-block py-2 px-5 mt-auto rounded-lg bg-red-600 text-slate-200 hover:bg-white hover:text-red-600 font-semibold transition-colors duration-300"
+                    className="inline-block py-2 px-3 mt-auto rounded-lg bg-red-600 text-slate-200 text-base hover:bg-white hover:text-red-600 font-semibold transition-colors duration-300"
                 >
                     View Team's Profile
                 </Link>
