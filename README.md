@@ -89,5 +89,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
--   [Ergast Developer API](http://ergast.com/mrd/) - For the F1 data
+-   [F1 API](https://f1api.dev/docs/) - For the F1 data
 -   All the amazing open-source libraries used in this project
