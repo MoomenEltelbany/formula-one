@@ -9,7 +9,7 @@ import {
     fetchDriverById,
     fetchDriverChampionshipStats,
     getDriverImage,
-} from "../../services/driversMockDetails";
+} from "../../services/driversService";
 import { getDriverSeasonSummary } from "../../utils/driverHelpers";
 import Main from "../../ui/Main";
 

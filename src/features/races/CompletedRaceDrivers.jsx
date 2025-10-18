@@ -1,4 +1,4 @@
-import { getDriverImage } from "../../services/driversMockDetails";
+import { getDriverImage } from "../../services/driversService";
 
 function CompletedRaceDrivers({ driverData }) {
     const { driver, grid, points, position, team, time } = driverData;

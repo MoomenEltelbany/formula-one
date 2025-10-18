@@ -2,8 +2,8 @@
 import { useLoaderData } from "react-router-dom";
 import DriversHeader from "../features/drivers/DriversHeader";
 import DriversList from "../features/drivers/DriversList";
-import { fetchAllDrivers } from "../services/driversMockDetails";
-import { fetchAllTeams } from "../services/teamsMockDetails";
+import { fetchAllDrivers } from "../services/driversService";
+import { fetchAllTeams } from "../services/teamsService";
 import { useState } from "react";
 
 function DriversPage() {

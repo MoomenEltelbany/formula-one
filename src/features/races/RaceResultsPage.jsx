@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { useLoaderData } from "react-router-dom";
-import { fetchCompletedRace } from "../../services/racesMockDetails";
+import { fetchCompletedRace } from "../../services/racesService";
 
 import RaceResultHeader from "./RaceResultHeader";
 import RaceResultSummary from "./RaceResultSummary";

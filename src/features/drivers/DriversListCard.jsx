@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getDriverImage } from "../../services/driversMockDetails";
+import { getDriverImage } from "../../services/driversService";
 
 function DriversListCard({ driver }) {
     const { driverId, name, surname, nationality, number, teamId } = driver;

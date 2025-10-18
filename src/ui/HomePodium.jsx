@@ -1,4 +1,4 @@
-import { getDriverImage } from "../services/driversMockDetails";
+import { getDriverImage } from "../services/driversService";
 import Main from "./Main";
 
 function HomePodium({ currentChampions }) {

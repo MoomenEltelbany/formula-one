@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
     getPodiumEmoji,
     getPositionColor,
-} from "../../services/standingsMockData";
+} from "../../services/standingsService";
 
 function DriverTableCell({ driverData }) {
     const { driver, driverId, points, position, team, wins } = driverData;

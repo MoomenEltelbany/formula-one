@@ -1,7 +1,4 @@
-import {
-    getDriverImage,
-    getDriverTeamLogo,
-} from "../services/driversMockDetails";
+import { getDriverImage, getDriverTeamLogo } from "../services/driversService";
 
 function HomeLeader({ currentChampions }) {
     const { topWinner } = currentChampions;

@@ -4,13 +4,13 @@ import { GiF1Car, GiCarWheel, GiCheckeredFlag, GiTrophy } from "react-icons/gi";
 import {
     fetchAllDrivers,
     fetchDriverChampionshipStats,
-} from "../services/driversMockDetails";
+} from "../services/driversService";
 import {
     fetchAllTeams,
     fetchTeamChampionshipStats,
-} from "../services/teamsMockDetails";
+} from "../services/teamsService";
 import LoadingSpinner from "./LoadingSpinner";
-import { fetchAllRaces } from "../services/racesMockDetails";
+import { fetchAllRaces } from "../services/racesService";
 
 const divStyles = `border-2 p-6 border-red-500/60 rounded-xl flex justify-center items-center flex-col hover:bg-gradient-to-br hover:from-red-50 hover:to-white hover:text-red-600 transition-all duration-300 space-y-3 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:border-red-600`;
 

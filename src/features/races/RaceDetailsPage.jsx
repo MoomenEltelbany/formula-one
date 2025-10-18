@@ -1,5 +1,5 @@
 import { useLoaderData, useSearchParams } from "react-router-dom";
-import { fetchRaceById } from "../../services/racesMockDetails";
+import { fetchRaceById } from "../../services/racesService";
 import Main from "../../ui/Main";
 
 /* eslint-disable react-refresh/only-export-components */

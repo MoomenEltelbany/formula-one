@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Link, useLoaderData } from "react-router-dom";
-import { fetchTeamsDrivers } from "../../services/teamsMockDetails";
+import { fetchTeamsDrivers } from "../../services/teamsService";
 import TeamOverview from "./TeamOverview";
 import TeamSummary from "./TeamSummary";
 import TeamDriverSummary from "./TeamDriverSummary";

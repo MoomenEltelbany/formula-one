@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchTeamsDrivers } from "../../services/teamsMockDetails";
+import { fetchTeamsDrivers } from "../../services/teamsService";
 import {
     getPodiumEmoji,
     getPositionColor,
-} from "../../services/standingsMockData";
+} from "../../services/standingsService";
 
 function ConstructorTableCell({ constructor }) {
     const [drivers, setDrivers] = useState([]);

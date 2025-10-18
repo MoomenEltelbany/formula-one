@@ -3,9 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import ConstructorStanding from "../features/standings/ConstructorStanding";
 import DriversStandingTable from "../features/standings/DriversStandingTable";
 import StandingHeader from "../features/standings/StandingHeader";
-import { fetchDriverChampionshipStats } from "../services/driversMockDetails";
-import { fetchAllRaces } from "../services/racesMockDetails";
-import { fetchTeamChampionshipStats } from "../services/teamsMockDetails";
+import { fetchDriverChampionshipStats } from "../services/driversService";
+import { fetchAllRaces } from "../services/racesService";
+import { fetchTeamChampionshipStats } from "../services/teamsService";
 
 function StandingPage() {
     const { allRaces, allTeams, allDrivers } = useLoaderData();

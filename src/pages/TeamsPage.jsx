@@ -2,7 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import TeamsHeader from "../features/teams/TeamsHeader";
 import TeamsList from "../features/teams/TeamsList";
-import { fetchTeamChampionshipStats } from "../services/teamsMockDetails";
+import { fetchTeamChampionshipStats } from "../services/teamsService";
 import { useState } from "react";
 
 function TeamsPage() {
