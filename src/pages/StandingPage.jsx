@@ -5,18 +5,18 @@ import DriversStandingTable from "../features/standings/DriversStandingTable";
 import StandingHeader from "../features/standings/StandingHeader";
 import { fetchDriverChampionshipStats } from "../services/driversMockDetails";
 import { fetchAllRaces } from "../services/racesMockDetails";
-import { fetchAllTeams } from "../services/teamsMockDetails";
+import { fetchTeamChampionshipStats } from "../services/teamsMockDetails";
 
 function StandingPage() {
     const { allRaces, allTeams, allDrivers } = useLoaderData();
 
-    // console.log(allDrivers);
+    // console.log(allTeams);
 
     return (
         <>
             <StandingHeader allRaces={allRaces} />
             <DriversStandingTable allDrivers={allDrivers} />
-            <ConstructorStanding />
+            <ConstructorStanding allTeams={allTeams} />
         </>
     );
 }
@@ -24,7 +24,7 @@ function StandingPage() {
 export async function loader() {
     const [allRaces, allTeams, allDrivers] = await Promise.all([
         fetchAllRaces(),
-        fetchAllTeams(),
+        fetchTeamChampionshipStats(),
         fetchDriverChampionshipStats(),
     ]);
 

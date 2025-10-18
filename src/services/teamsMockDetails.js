@@ -164,8 +164,8 @@ export async function fetchTeamChampionshipStats() {
     return data;
 }
 
-export async function fetchTeamsDrivers(id) {
-    const res = await fetch(`/api/current/teams/${id}/drivers`);
+export async function fetchTeamsDrivers(id, { signal } = {}) {
+    const res = await fetch(`/api/current/teams/${id}/drivers`, { signal });
 
     if (!res.ok) throw new Error("Drivers couldn't be fetched");
 

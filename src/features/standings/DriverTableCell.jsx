@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 function DriverTableCell({ driverData }) {
-    console.log(driverData);
     const { driver, driverId, points, position, team, wins } = driverData;
 
     let emoji = "";

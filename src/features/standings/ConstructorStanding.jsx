@@ -1,7 +1,10 @@
-import { mockConstructorStandings } from "../../services/standingsMockData";
 import ConstructorTableCell from "./ConstructorTableCell";
 
-function ConstructorStanding() {
+function ConstructorStanding({ allTeams }) {
+    const teams = allTeams["constructors_championship"];
+
+    console.log(teams);
+
     return (
         <section className="bg-black py-12">
             <div className="overflow-x-auto bg-neutral-900 m-8 p-6 sm:p-8 rounded-xl shadow-lg max-w-5xl mx-auto text-white flex flex-col items-center gap-5 tracking-wider">
@@ -14,12 +17,12 @@ function ConstructorStanding() {
                         <tr>
                             <th className="px-4 py-3">Position</th>
                             <th className="px-4 py-3">Team</th>
+                            <th className="px-4 py-3 hidden md:table-cell">
+                                Country
+                            </th>
                             <th className="px-4 py-3">Points</th>
                             <th className="px-4 py-3 hidden md:table-cell">
                                 Wins
-                            </th>
-                            <th className="px-4 py-3 hidden md:table-cell">
-                                Podiums
                             </th>
                             <th className="px-4 py-3">Drivers</th>
                         </tr>
@@ -27,10 +30,10 @@ function ConstructorStanding() {
 
                     {/* TABLE BODY */}
                     <tbody className="bg-black">
-                        {mockConstructorStandings.map((constructor) => (
+                        {teams.map((constructor) => (
                             <ConstructorTableCell
                                 constructor={constructor}
-                                key={constructor.position}
+                                key={constructor.teamId}
                             />
                         ))}
                     </tbody>
