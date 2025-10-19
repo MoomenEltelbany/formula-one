@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import TeamsHeader from "../features/teams/TeamsHeader";
 import TeamsList from "../features/teams/TeamsList";
 import { fetchTeamChampionshipStats } from "../services/teamsService";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function TeamsPage() {
     const [selectedTeam, setSelectedTeam] = useState("all");
@@ -16,6 +16,10 @@ function TeamsPage() {
 
     const chosenTeams =
         selectedTeam === "all" ? constructorsTeams : filteredTeams;
+
+    useEffect(function () {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div>
