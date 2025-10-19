@@ -1,4 +1,4 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, ScrollRestoration, useNavigation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
@@ -14,6 +14,7 @@ function AppLayout() {
             <Header />
             <main className="flex-grow bg-black">
                 <Outlet />
+                <ScrollRestoration />
             </main>
             <Footer />
         </div>
