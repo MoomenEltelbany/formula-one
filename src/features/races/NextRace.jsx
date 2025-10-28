@@ -24,7 +24,7 @@ function NextRace({ raceData }) {
                 </p>
                 <p className="text-2xl">📅 {formatDate(schedule.race.date)}</p>
                 <p className="text-2xl text-red-500 text-center font-medium">
-                    ⏰ {daysLeftToRace} days left to the next race
+                    ⏰ {daysLeftToRace}
                 </p>
                 <div className="bg-black max-w-2xl rounded-lg border-2 border-red-500/50 shadow-md hover:scale-105 transition-transform duration-300">
                     <img

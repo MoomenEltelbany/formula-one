@@ -12,7 +12,9 @@ export function getRaceCountdown(raceDateString) {
     if (daysLeft === 0) {
         return "🏁 The race is today!";
     } else if (daysLeft > 0) {
-        return `${daysLeft} day${daysLeft > 1 ? "s" : ""} left`;
+        return `${daysLeft} day${
+            daysLeft > 1 ? "s" : ""
+        } left to the next race`;
     } else {
         return "🏎️ The next race will be announced soon!";
     }

@@ -1,13 +1,13 @@
 import { getDriverImage, getDriverTeamLogo } from "../services/driversService";
 
 function HomeLeader({ currentChampions }) {
-    const { topWinner } = currentChampions;
+    const { currentLeader } = currentChampions;
 
     const image = getDriverImage(
-        `${topWinner.driver.name} ${topWinner.driver.surname}`
+        `${currentLeader.driver.name} ${currentLeader.driver.surname}`
     );
 
-    const teamImage = getDriverTeamLogo(topWinner.teamId);
+    const teamImage = getDriverTeamLogo(currentLeader.teamId);
 
     return (
         <section className="bg-black py-12">
@@ -18,23 +18,26 @@ function HomeLeader({ currentChampions }) {
                 <div className="flex flex-col sm:flex-row items-center gap-8">
                     <img
                         src={image}
-                        alt={`Photo of ${topWinner.driver.name} ${topWinner.driver.surname}`}
+                        alt={`Photo of ${currentLeader.driver.name} ${currentLeader.driver.surname}`}
                         className="w-80 h-80 object-cover object-top rounded-lg border-2 border-red-500 shadow-md"
                     />
 
                     <div className="text-center sm:text-left space-y-2">
                         <h3 className="text-2xl font-semibold">
-                            {topWinner.driver.name} {topWinner.driver.surname}
+                            {currentLeader.driver.name}{" "}
+                            {currentLeader.driver.surname}
                         </h3>
                         <p className="text-red-400 font-medium">
-                            {topWinner.team.teamName}
+                            {currentLeader.team.teamName}
                         </p>
-                        <p className="text-lg">🏁 {topWinner.points} Points</p>
+                        <p className="text-lg">
+                            🏁 {currentLeader.points} Points
+                        </p>
                     </div>
                     <div className="w-20 h-20 absolute bottom-4 right-4">
                         <img
                             src={teamImage}
-                            alt={topWinner.teamId}
+                            alt={currentLeader.teamId}
                             className="w-20 h-20 object-cover object-top  shadow-md"
                         />
                     </div>
