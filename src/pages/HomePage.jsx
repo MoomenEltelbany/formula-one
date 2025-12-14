@@ -10,6 +10,10 @@ function HomePage() {
     const { drivers, currentChampions, teams, currentTeams, raceData } =
         useLoaderData();
 
+    const isFinished = raceData.completedRacesCount === 24;
+
+    console.log(isFinished);
+
     return (
         <div className="bg-black">
             <Hero />
@@ -20,9 +24,14 @@ function HomePage() {
                 currentTeams={currentTeams}
                 raceData={raceData}
             />
-            <HomeLeader currentChampions={currentChampions} />
+            <HomeLeader
+                currentChampions={currentChampions}
+                headerText={isFinished ? "The Winner of the Championship" : ""}
+            />
             <HomePodium currentChampions={currentChampions} />
-            <NextRace raceData={raceData.nextRaceData} />
+            {raceData.nextRaceData && (
+                <NextRace raceData={raceData.nextRaceData} />
+            )}
             <HomeExploreSection />
         </div>
     );

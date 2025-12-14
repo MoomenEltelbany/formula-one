@@ -14,7 +14,7 @@ function RacesPage() {
                 races={races}
                 completedRacesCount={completedRacesCount}
             />
-            <NextRace raceData={nextRaceData} />
+            {nextRaceData && <NextRace raceData={nextRaceData} />}
             <RacesSection races={races} />
         </>
     );
